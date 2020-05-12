@@ -23,15 +23,31 @@
 					<input class="input_component percentage" type="text" placeholder="Percentage of Component"> 
 				</td>
 				<td class="wrapper_component result">TEST</td>
-				<td class="wrapper_component letter">TEST </td>
+				<td class="wrapper_component letter">
+					<select class="letter_grade_dropdown">
+						<option value="">Letter Grade</option>
+						<option value="A">A</option>
+						<option value="B+">B+</option>
+						<option value="B">B</option>
+						<option value="C+">C+</option>
+						<option value="C">C</option>
+						<option value="D">D</option>
+						<option value="F">F</option>
+					</select>
+					<img class="dropdown_arrow" src="grade_dropdown_icon.svg">
+				</td>
 			</tr>
 		</table>
-
-	</body>
-
-	<!-- Script to make bottom cells of component row equal width with each other -->
 	<!-- Width of component row is used as basis -->
 	<script src="landing-component-resize.js">
 	</script>
+
+	<!-- Script for animating drop down arrow on click -->
+	<script src="dropdown-animation.js">
+	</script>
+	</body>
+
+	<!-- Script to make bottom cells of component row equal width with each other -->
+	
 
 </html>

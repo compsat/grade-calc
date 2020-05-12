@@ -8,3 +8,13 @@ gradeDropDownControl.addEventListener('focus', (event) => {
 gradeDropDownControl.addEventListener('blur', (event) => {
 	dropDownArrow.setAttribute("style", "transform:");
 })
+
+const componentPercentageInput = document.getElementsByClassName("input_component percentage")[0];
+
+componentPercentageInput.addEventListener('focus', (event) => {
+	componentPercentageInput.setAttribute("placeholder", "");
+});
+
+componentPercentageInput.addEventListener('blur', (event) => {
+	componentPercentageInput.setAttribute("placeholder", "Percentage of Component");
+});

@@ -18,6 +18,8 @@
 
 	border-top-right-radius: 21px; 
 	border-top-left-radius: 21px;
+
+	width: 550px;
 }
 
 .component_row td:not(:first-child) {
@@ -46,7 +48,9 @@
 }
 
 .input_component.name {
-	/* Placeholder width for the whole row */
+	/* Declared so that all placeholder text 
+	   of component name input can be seesn
+	*/
 	width: 450px;
 }
 
@@ -73,9 +77,4 @@
     color: black;
     font-weight: bold;
 } 
-
-.wrapper_component.percentage {
-	max-width: 105px;
-}
-
 

@@ -1,0 +1,81 @@
+.component_row {
+	border-collapse: collapse;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.component_row th, td {
+	background: red;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.component_row th {
+	border-bottom-style: solid;
+	border-bottom-color: #A39E9E;
+	border-bottom-width: 2px;
+
+	border-top-right-radius: 21px; 
+	border-top-left-radius: 21px;
+}
+
+.component_row td:not(:first-child) {
+	text-align: center;
+}
+
+.component_row td:first-child {
+	border-right-style: solid;
+	border-right-color: #A39E9E;
+	border-right-width: 2px;
+
+	border-bottom-left-radius: 21px;
+}
+
+.component_row td:last-child {
+	border-left-style: solid;
+	border-left-color: #A39E9E;
+	border-left-width: 2px;
+
+	border-bottom-right-radius: 21px;
+}
+
+.input_component {
+	background: transparent;
+	border-style: none;
+}
+
+.input_component.name {
+	/* Placeholder width for the whole row */
+	width: 450px;
+}
+
+.input_component.percentage {
+	max-width: auto;
+	background: transparent;
+	text-align: center;
+
+	margin-left: -10px;
+}
+
+/* Cross browser code for making input placeholder bold */
+.input_component.name::-webkit-input-placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.input_component.name::-moz-placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.input_component.name:-ms-input-placeholder {
+    color: black;
+    font-weight: bold;
+} 
+
+.wrapper_component.percentage {
+	max-width: 105px;
+}
+
+

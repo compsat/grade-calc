@@ -4,12 +4,35 @@
 	
 	<head>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="landing.css">
 	</head>
 
 	<body>
-		
+		<!-- Temporary naming scheme where each component row id is assigned a number -->
+		<!-- This will help us later on in identifying specific rows with Javascript  -->
+		<table id="component_1" class="component_row">
+			<tr>
+				<th colspan="3">
+					<input class="input_component name" type="text" placeholder="Assessment Component Name">
+				</th>
+			</tr>
+
+			<tr>
+				<td class="wrapper_component percentage"> 
+					<input class="input_component percentage" type="text" placeholder="Percentage of Component"> 
+				</td>
+				<td >TEST</td>
+				<td>TEST </td>
+			</tr>
+		</table>
 
 	</body>
+
+	<!-- Script to make bottom cells of component row equal width with each other -->
+	<!-- Width of component percentage cell is used as basis -->
+	<script>
+		
+	</script>
 
 </html>

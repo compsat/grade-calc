@@ -1,7 +1,11 @@
+body {
+	background: #DCDCDC;
+}
+
 .component_row {
 	display: flex;
 	flex-direction: row;
-	background: red;
+	background: transparent;
 	width: 650px;
 }
 
@@ -11,6 +15,10 @@
 	border-color: #67647E;
 	border-radius: 5px;
 	min-width: 0px;
+}
+
+.component_row * {
+	background: transparent;
 }
 
 .component_row *:not(:last-child) {

@@ -10,4 +10,21 @@
 	border-width: 2px;
 	border-color: #67647E;
 	border-radius: 5px;
+	min-width: 0px;
+}
+
+.input_component.name {
+	flex: 5;
+}
+
+.input_component.percentage {
+	flex: 2;
+}
+
+.input_component.numerical_result {
+	flex: 2;
+}
+
+.input_component.letter {
+	flex: 2;
 }

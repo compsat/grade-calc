@@ -1,5 +1,3 @@
-<!--At the time of writing, the developer is prioritizing the creation of the grade assessment component row. This html page thus serves only as boilerplate code as well as a means to observe the component -->
-
 <html>
 	
 	<head>
@@ -9,45 +7,5 @@
 	</head>
 
 	<body>
-		<!-- Temporary naming scheme where each component row id is assigned a number -->
-		<!-- This will help us later on in identifying specific rows with Javascript  -->
-		<table id="component_1" class="component_row">
-			<tr>
-				<th colspan="3">
-					<input class="input_component name" type="text" placeholder="Assessment Component Name">
-				</th>
-			</tr>
-
-			<tr>
-				<td class="wrapper_component percentage"> 
-					<input class="input_component percentage" type="text" placeholder="Percentage of Component"> 
-				</td>
-				<td class="wrapper_component result">TEST</td>
-				<td class="wrapper_component letter">
-					<select class="letter_grade_dropdown">
-						<option value="">Letter Grade</option>
-						<option value="A">A</option>
-						<option value="B+">B+</option>
-						<option value="B">B</option>
-						<option value="C+">C+</option>
-						<option value="C">C</option>
-						<option value="D">D</option>
-						<option value="F">F</option>
-					</select>
-					<img class="dropdown_arrow" src="grade_dropdown_icon.svg">
-				</td>
-			</tr>
-		</table>
-	<!-- Width of component row is used as basis -->
-	<script src="landing-component-resize.js">
-	</script>
-
-	<!-- Script for animating drop down arrow on click -->
-	<script src="component-row-listeners.js">
-	</script>
 	</body>
-
-	<!-- Script to make bottom cells of component row equal width with each other -->
-	
-
 </html>

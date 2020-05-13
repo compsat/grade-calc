@@ -13,6 +13,10 @@
 	min-width: 0px;
 }
 
+.input_component:not(.name) {
+	text-align: center;
+}
+
 .input_component.name {
 	flex: 5;
 }

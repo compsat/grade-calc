@@ -13,6 +13,9 @@
 	min-width: 0px;
 }
 
+.component_row *:not(:last-child) {
+	margin-right: 10px;
+}
 .input_component:not(.name) {
 	text-align: center;
 }

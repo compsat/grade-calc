@@ -1,0 +1,13 @@
+.component_row {
+	display: flex;
+	flex-direction: row;
+	background: red;
+	width: 500px;
+}
+
+.input_component {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #67647E;
+	border-radius: 5px;
+}

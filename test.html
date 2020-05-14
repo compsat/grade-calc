@@ -9,23 +9,23 @@
 	<body>
 		<div class="component_row" id="row_1">
 			<div class="input_wrapper">
-			<input type="text" class="input_component name" name="name"></input>
+			<input type="text" class="input_component name" name="name" required></input>
 			<span class="placeholder name">Minor Assessment Name</span>
 			</div>
 
 			<div class="input_wrapper">
-			<input type="number" class="input_component percentage" name="percentage"></input>
+			<input type="text" class="input_component percentage" name="percentage" required></input>
 			<span class="placeholder percentage">Percentage</span>
 			</div>
 
 			<div class="input_wrapper">
-			<input type="text" class="input_component numerical_result" name="numerical_result"></input>
+			<input type="text" class="input_component numerical_result" name="numerical_result" required></input>
 			<span class="placeholder numerical_result">Numerical Result</span>
 			</div>
 
 			<div class="input_wrapper">
-				<select class="input_component letter">
-					<option value=""></option>
+				<select class="input_component letter" required>
+					<option disabled selected></option>
 					<option value="A">A</option>
 					<option value="B+">B+</option>
 					<option value="B">B</option>

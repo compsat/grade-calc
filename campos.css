@@ -58,12 +58,26 @@ input[type="number"]::-webkit-inner-spin-button {
 	appearance: none;
 }
 
+.input_component.letter >:first-child {
+	display: none;
+} 
+
 .placeholder {
 	position: relative;
 	z-index: 1;
 	top: -50%;
 	pointer-events: none;
 	font-size: 0.9em;
+
+	background: #DCDCDC;
+
+	transition: 0.2s;
+	display: inline-block;
+
+	padding-left: 3px;
+	padding-right: 3px;
+
+	text-align: center;
 }
 
 .placeholder.name {
@@ -71,9 +85,31 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .placeholder:not(.name):not(.numerical_result) {
-	left: 20%;
+	left: 17%;
 }
 
 .placeholder.numerical_result {
-	left: 5%;
+	left: 3%;
+}
+
+.input_component:focus ~ .placeholder,
+.input_component:not(:focus):valid ~ .placeholder
+ {
+	font-size: 0.75em;
+}
+
+.input_component:focus ~ .placeholder,
+.input_component:not(:focus):valid ~ .placeholder {
+	top: -80%;
+}
+
+.input_component:not(.numerical_result):not(.name):focus ~ .placeholder,
+.input_component:not(.numerical_result):not(.name):not(:focus):valid ~ .placeholder
+ {
+	left: 12%;
+}
+
+.input_component.numerical_result:focus ~ .placeholder,
+.input_component.numerical_result:not(:focus):valid ~ .placeholder {
+	left: 9%;
 }

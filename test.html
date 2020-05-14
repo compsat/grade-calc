@@ -8,23 +8,38 @@
 
 	<body>
 		<div class="component_row" id="row_1">
+			<div class="input_wrapper">
 			<input type="text" class="input_component name" name="name"></input>
+			<span class="placeholder name">Minor Assessment Name</span>
+			</div>
+
+			<div class="input_wrapper">
 			<input type="number" class="input_component percentage" name="percentage"></input>
+			<span class="placeholder percentage">Percentage</span>
+			</div>
+
+			<div class="input_wrapper">
 			<input type="text" class="input_component numerical_result" name="numerical_result"></input>
-			<select class="input_component letter">
-				<option value="">Letter Result</option>
-				<option value="A">A</option>
-				<option value="B+">B+</option>
-				<option value="B">B</option>
-				<option value="C+">C+</option>
-				<option value="C">C</option>
-				<option value="D">D</option>
-				<option value="F">F</option>
-			</select>
-			<span class="placeholder">Minor Assessment Name</span>
-			<span class="placeholder">Percentage</span>
-			<span class="placeholder">Numerical Result</span>
-			<span class="placeholder">Letter Result</span>
+			<span class="placeholder numerical_result">Numerical Result</span>
+			</div>
+
+			<div class="input_wrapper">
+				<select class="input_component letter">
+					<option value=""></option>
+					<option value="A">A</option>
+					<option value="B+">B+</option>
+					<option value="B">B</option>
+					<option value="C+">C+</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="F">F</option>
+				</select>
+					<span class="placeholder letter">Letter Result</span>
+			</div>
+			
+			
+			
+		
 		</div>
 	</body>
 </html>

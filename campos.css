@@ -3,19 +3,22 @@ body {
 }
 
 .component_row {
+	margin-top: 30px;
+	margin-left: 10px;
 	display: flex;
 	flex-direction: row;
 	background: transparent;
-	width: 650px;
+	width: 700px;
 }
 
-.input_component {
-	border-style: solid;
-	border-width: 2px;
-	border-color: #67647E;
-	border-radius: 5px;
-	min-width: 0px;
+.component_row *:first-child {
+	flex: 5;
 }
+
+.component_row *:not(:first-child) {
+	flex: 2;
+}
+
 
 .component_row * {
 	background: transparent;
@@ -24,13 +27,20 @@ body {
 .component_row *:not(:last-child) {
 	margin-right: 10px;
 }
+
+.input_component {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #67647E;
+	border-radius: 5px;
+	width: 100%;
+	height: 38px;
+}
+
 .input_component:not(.name) {
 	text-align: center;
 }
 
-.input_component.name {
-	flex: 5;
-}
 
 input[type="number"] {
 	-moz-appearance: textfield;
@@ -42,18 +52,6 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-.input_component.percentage {
-	flex: 2;
-}
-
-.input_component.numerical_result {
-	flex: 2;
-}
-
-.input_component.letter {
-	flex: 2;
-}
-
 .input_component.letter {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -61,6 +59,21 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .placeholder {
-	position: absolute;
+	position: relative;
 	z-index: 1;
+	top: -50%;
+	pointer-events: none;
+	font-size: 0.9em;
+}
+
+.placeholder.name {
+	left: 5%;
+}
+
+.placeholder:not(.name):not(.numerical_result) {
+	left: 20%;
+}
+
+.placeholder.numerical_result {
+	left: 5%;
 }

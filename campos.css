@@ -2,6 +2,17 @@ body {
 	background: #DCDCDC;
 }
 
+.modal_content {
+	display: flex;
+	flex-direction: column;
+
+	width: 670px;
+	height: 700px;
+
+	background: red;
+}
+
+
 .component_row {
 	margin-top: 30px;
 	margin-left: 10px;

@@ -6,10 +6,8 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	width: 670px;
+	width: 800px;
 	height: 700px;
-
-	background: red;
 }
 
 .modal_header {
@@ -28,9 +26,15 @@ body {
 .close_modal_btn:hover {
 	cursor: pointer;
 }
+
 .close_modal_btn > img {
 	width: 27px;
 	height: 27px;
+}
+
+.modal_padding {
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .modal_component_form {
@@ -39,10 +43,11 @@ body {
 
 	margin-top: 40px;
 	margin-bottom: 40px;
-	background: blue;
 
 	display: flex;
 	align-items: center;
+
+	flex-direction: column;
 }
 
 .modal_row {
@@ -53,17 +58,59 @@ body {
 
 	width: 100%;
 
-	margin-left: 50px;
-	margin-right: 50px;
+	position: relative;
 }
 
+.component_primary_information_row {
+	display: flex;
+	flex-direction: row;
+
+	position: relative;
+
+	width: 100%;
+
+	margin-bottom: 15px;
+
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.component_primary_information_row > .input_wrapper > input {
+	background: transparent;
+}
+
+.component_primary_information_row > :last-child {
+	flex: 2;
+}
+
+.component_primary_information_row > :first-child {
+	flex: 8;
+	margin-right: 20px;
+}
+
+.component_primary_information_row > :first-child > .placeholder {
+	margin-left: -12px;
+}
+
+.component_primary_information_row > :last-child > .placeholder {
+	margin-left: -14px;
+	margin-top: -2px;
+}
+
+.component_primary_information_row > :last-child > .input_suffix:before {
+	margin-top: -3px;
+}
+
+
+
+
 .component_row {
-	margin-top: 30px;
-	margin-left: 10px;
 	display: flex;
 	flex-direction: row;
 	background: transparent;
-	width: 700px;
+	width: 100%;
+
+	margin-bottom: -4px;
 }
 
 .component_row *:first-child {
@@ -88,6 +135,10 @@ body {
 	color: black;
 }
 
+.primary:focus ~ .placeholder,
+.primary:valid ~ .placeholder {
+	top: -75%;
+}
 .input_wrapper {
 	position: relative;
 }
@@ -111,7 +162,7 @@ body {
 	border-color: #67647E;
 	border-radius: 5px;
 	width: 100%;
-	height: 38px;
+	height: 50px;
 }
 
 .input_component.name {
@@ -178,13 +229,13 @@ input[type="number"]::-webkit-inner-spin-button {
 	font-size: 0.75em;
 }
 
-.input_component:focus ~ .placeholder,
-.input_component:not(:focus):valid ~ .placeholder {
+.input_component:focus:not(.primary) ~ .placeholder,
+.input_component:not(:focus):not(.primary) :valid ~ .placeholder {
 	top: -80%;
 }
 
-.input_component:not(.numerical_result):not(.name):focus ~ .placeholder,
-.input_component:not(.numerical_result):not(.name):not(:focus):valid ~ .placeholder
+.input_component:not(.numerical_result):not(.name):not(.primary):focus ~ .placeholder,
+.input_component:not(.numerical_result):not(.name):not(.primary):not(:focus):valid ~ .placeholder
  {
 	left: 12%;
 }

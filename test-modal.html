@@ -9,7 +9,7 @@
 	<body>
 		
 		<div class="modal_content">
-			<div class="modal_header">
+			<div class="modal_header modal_padding">
 				<div class="modal_row">
 					Add Assessment
 
@@ -19,8 +19,114 @@
 				</div>
 			</div>
 
-			<form class="modal_component_form">
-				
+			<form class="modal_component_form  modal_padding">
+				<div class="component_primary_information_row">
+					<div class="input_wrapper">
+						<input type="text" class="input_component name" name="name" required></input>
+						<span class="placeholder name">Major Assessment Name</span>
+					</div>
+
+					<div class="input_wrapper percentage">
+						<input type="text" class="input_component percentage primary" name="percentage" required></input>
+						<div class="input_suffix percentage"></div>
+						<span class="placeholder percentage">Percentage</span>
+					</div>
+				</div>
+				<div class="component_row" id="row_1">
+					<div class="input_wrapper">
+						<input type="text" class="input_component name" name="name" required></input>
+						<span class="placeholder name">Minor Assessment Name</span>
+					</div>
+
+					<div class="input_wrapper percentage">
+						<input type="text" class="input_component percentage" name="percentage" required></input>
+						<div class="input_suffix percentage"></div>
+						<span class="placeholder percentage">Percentage</span>
+					</div>
+
+					<div class="input_wrapper">
+						<input type="text" class="input_component numerical_result" name="numerical_result" required></input>
+						<span class="placeholder numerical_result">Numerical Result</span>
+					</div>
+
+					<div class="input_wrapper">
+						<select class="input_component letter" required>
+							<option disabled selected></option>
+							<option value="A">A</option>
+							<option value="B+">B+</option>
+							<option value="B">B</option>
+							<option value="C+">C+</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="F">F</option>
+						</select>
+							<span class="placeholder letter">Letter Result</span>
+					</div>
+				</div>
+
+				<div class="component_row" id="row_2">
+					<div class="input_wrapper">
+						<input type="text" class="input_component name" name="name" required></input>
+						<span class="placeholder name">Minor Assessment Name</span>
+					</div>
+
+					<div class="input_wrapper percentage">
+						<input type="text" class="input_component percentage" name="percentage" required></input>
+						<div class="input_suffix percentage"></div>
+						<span class="placeholder percentage">Percentage</span>
+					</div>
+
+					<div class="input_wrapper">
+						<input type="text" class="input_component numerical_result" name="numerical_result" required></input>
+						<span class="placeholder numerical_result">Numerical Result</span>
+					</div>
+
+					<div class="input_wrapper">
+						<select class="input_component letter" required>
+							<option disabled selected></option>
+							<option value="A">A</option>
+							<option value="B+">B+</option>
+							<option value="B">B</option>
+							<option value="C+">C+</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="F">F</option>
+						</select>
+							<span class="placeholder letter">Letter Result</span>
+					</div>
+				</div>
+
+				<div class="component_row" id="row_3">
+					<div class="input_wrapper">
+						<input type="text" class="input_component name" name="name" required></input>
+						<span class="placeholder name">Minor Assessment Name</span>
+					</div>
+
+					<div class="input_wrapper percentage">
+						<input type="text" class="input_component percentage" name="percentage" required></input>
+						<div class="input_suffix percentage"></div>
+						<span class="placeholder percentage">Percentage</span>
+					</div>
+
+					<div class="input_wrapper">
+						<input type="text" class="input_component numerical_result" name="numerical_result" required></input>
+						<span class="placeholder numerical_result">Numerical Result</span>
+					</div>
+
+					<div class="input_wrapper">
+						<select class="input_component letter" required>
+							<option disabled selected></option>
+							<option value="A">A</option>
+							<option value="B+">B+</option>
+							<option value="B">B</option>
+							<option value="C+">C+</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+							<option value="F">F</option>
+						</select>
+							<span class="placeholder letter">Letter Result</span>
+					</div>
+				</div>
 			</form>
 		</div>
 	</body>

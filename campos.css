@@ -174,7 +174,7 @@ body {
 	overflow-y: auto;
 	position: relative;
 	padding-top: 2px;
-	z-index: -1;
+
 }
 
 .input_component.name {

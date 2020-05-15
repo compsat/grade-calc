@@ -59,6 +59,9 @@ body {
 	height: 38px;
 }
 
+.input_component.name {
+	padding-left: 17px;
+}
 .input_component:not(.name) {
 	text-align: center;
 }

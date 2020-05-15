@@ -244,3 +244,20 @@ input[type="number"]::-webkit-inner-spin-button {
 .input_component.numerical_result:not(:focus):valid ~ .placeholder {
 	left: 9%;
 }
+
+.add_component_btn {
+	margin-top: auto;
+	background: rgba(102, 99, 125, 0.9);
+
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 350px;
+	height: 75px;
+
+	color: white;
+	font-weight: bold;
+	font-size: 1.7em;
+}

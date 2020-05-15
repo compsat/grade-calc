@@ -28,6 +28,28 @@ body {
 	margin-right: 10px;
 }
 
+.input_component.percentage:focus ~ .input_suffix:before,
+.input_component.percentage:valid ~ .input_suffix:before {
+	color: black;
+}
+
+.input_wrapper {
+	position: relative;
+}
+
+.input_suffix.percentage {
+	position: absolute;
+	left: 80%;
+	bottom: 88%;
+}
+.input_suffix.percentage:before {
+	content: '%';
+	position: absolute;
+	color: transparent;
+
+	transition: color 0.2s;
+}
+
 .input_component {
 	border-style: solid;
 	border-width: 2px;

@@ -165,6 +165,15 @@ body {
 	height: 50px;
 }
 
+.form_row_container {
+	height: 510px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	padding-top: 2px;
+	z-index: -1;
+}
+
 .input_component.name {
 	padding-left: 17px;
 }

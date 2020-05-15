@@ -230,7 +230,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .input_component:focus:not(.primary) ~ .placeholder,
-.input_component:not(:focus):not(.primary) :valid ~ .placeholder {
+.input_component:not(:focus):not(.primary):valid ~ .placeholder {
 	top: -80%;
 }
 

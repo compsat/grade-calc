@@ -12,6 +12,21 @@ body {
 	background: red;
 }
 
+.modal_header {
+	width: 100%;
+	flex: 2;
+
+	background: yellow;
+}
+
+.modal_component_form {
+	width: 100%;
+	flex: 17;
+
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background: blue;
+}
 
 .component_row {
 	margin-top: 30px;

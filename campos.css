@@ -20,6 +20,7 @@ body {
 
 	font-size: 26px;
 	font-weight: bold;
+	font-family: 'Rubik', sans-serif;
 	color: white;
 
 	padding-top: 15px;
@@ -143,8 +144,10 @@ body {
 .primary:valid ~ .placeholder {
 	top: -75%;
 }
+
 .input_wrapper {
 	position: relative;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .input_suffix.percentage {
@@ -174,7 +177,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: relative;
-	padding-top: 2px;
+	padding-top: 5px;
 
 }
 
@@ -272,5 +275,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 	color: white;
 	font-weight: bold;
+	font-family: "IBM Plex Sans", sans-serif;
 	font-size: 1.7em;
 }

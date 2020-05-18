@@ -35,6 +35,7 @@ body {
 
 .input_wrapper {
 	position: relative;
+	font-family: 'IBM Sans Serif', sans-serif;
 }
 
 .input_suffix.percentage {

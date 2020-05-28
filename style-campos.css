@@ -1,13 +1,11 @@
-body {
-	background: #DCDCDC;
-}
-
 .modal_content {
 	display: flex;
 	flex-direction: column;
 
 	width: 800px;
 	height: 700px;
+
+	background: #DCDCDC;
 }
 
 .modal_header {

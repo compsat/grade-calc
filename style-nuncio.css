@@ -47,3 +47,58 @@ html, body {
   border-radius: 3.62799px;
   margin: 15px;
 }
+
+.outer-circle{
+  background: #93E1D8;
+  box-shadow: 0px 9.05172px 18.1034px rgba(0, 0, 0, 0.15);
+  width: 210px;
+  height: 210px;
+  border-radius: 100%;
+  display: grid;
+}
+
+.inner-circle{
+  background: #FAFAFA;
+  box-shadow: 0px 9.05172px 18.1034px rgba(0, 0, 0, 0.15);
+  color: #262424;
+  width: 193.71px;
+  height: 193.71px;
+  border-radius: 100%;
+  margin: auto;
+  display: grid;
+}
+
+.inside-box{
+  width: 123px;
+  height: 141.95px;
+  margin: auto;
+  display: grid;
+}
+
+.letter-grade{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72.2202px;
+  line-height: 80%;
+  margin: auto;
+  margin-bottom: 0;
+  }
+
+.number-grade{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27.0826px;
+  line-height: 100%;
+  margin: auto;
+}
+
+.final-grade{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23.763px;
+  line-height: 100%;
+  margin: auto;
+}

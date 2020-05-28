@@ -214,7 +214,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	z-index: 1;
 	top: -50%;
 	pointer-events: none;
-	font-size: 0.9em;
+	font-size: 0.85em;
 
 	background: #DCDCDC;
 

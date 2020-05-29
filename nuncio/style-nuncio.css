@@ -3,6 +3,27 @@ html, body {
   padding: 0;
 }
 
+.big-box{
+  position: absolute;
+  width: 967px;
+  height: 766px;
+  left: 128px;
+  top: 307px;
+}
+
+.main-form{
+  position: absolute;
+  width: 967px;
+  height: 669px;
+  left: 128px;
+  top: 307px;
+
+  background: #FAFAFA;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+/*icons*/
 .icon-container{
   width: 100%;
   height: auto;
@@ -47,7 +68,42 @@ html, body {
   border-radius: 3.62799px;
   margin: 15px;
 }
+/*center add new document*/
+.add-doc{
+  text-align:center;
+}
 
+.no-assess{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21.0583px;
+  line-height: 150%;
+
+  text-align: center;
+
+  color: #797979;
+}
+
+.create-new-assess{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21.0583px;
+  line-height: 150%;
+
+  text-align: center;
+
+  color: #797979;
+}
+
+.btn btn-outline-secondary{
+  text-align: center;
+  width: 416.65px;
+  height: 72.2px;
+}
+
+/*Final Grade Circle*/
 .outer-circle{
   background: #93E1D8;
   box-shadow: 0px 9.05172px 18.1034px rgba(0, 0, 0, 0.15);

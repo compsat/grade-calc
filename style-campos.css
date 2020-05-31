@@ -277,3 +277,8 @@ input[type="number"]::-webkit-inner-spin-button {
 	font-family: "IBM Plex Sans", sans-serif;
 	font-size: 1.7em;
 }
+
+.input_suffix.percentage:before {
+	margin-top: 5px;
+}
+

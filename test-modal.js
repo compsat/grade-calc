@@ -112,7 +112,17 @@ function componentRow() {
 	return componentRow;
 }
 
+function appendComponentRow() {
+	const lastComponentRow = document.getElementById(`row_${numberOfMinorAssesments}`);
+	const newComponentRow = componentRow();
+	console.log(`row_${numberOfMinorAssesments}`);
+	lastComponentRow.after(newComponentRow);
+}
+
 window.onload = () => {
 	numberOfMinorAssesments = 3;
 	letterGrades = ["A", "B+", "B", "C+", "C", "D", "F"];
+
+	let addComponentButton = document.getElementById("id_add_component_btn");
+	addComponentButton.addEventListener("click", (event) => appendComponentRow());
 }

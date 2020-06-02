@@ -262,7 +262,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .add_component_btn {
-	margin-top: auto;
+	margin-top: 35px;
 	background: rgba(102, 99, 125, 0.9);
 
 

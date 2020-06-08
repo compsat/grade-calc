@@ -35,6 +35,11 @@ html, body {
   background: #403E3E;
 }
 
+table{
+  width: 744px;
+  margin: auto;
+}
+
 th{
   font-family: IBM Plex Sans;
   font-style: normal;
@@ -43,6 +48,34 @@ th{
   line-height: 150%;
 
   color: #262424;
+}
+
+tr{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 175%;
+  color: #262424;
+}
+
+.opened-row{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  color: #262424;
+}
+
+.content-row{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  color: #797979;
 }
 
 /*icons*/

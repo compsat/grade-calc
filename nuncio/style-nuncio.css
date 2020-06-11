@@ -38,6 +38,7 @@ html, body {
 table{
   width: 744px;
   margin: auto;
+  text-align: center;
 }
 
 th{
@@ -46,7 +47,6 @@ th{
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
-
   color: #262424;
 }
 
@@ -74,8 +74,12 @@ tr{
   font-weight: 300;
   font-size: 14px;
   line-height: 100%;
-  text-align: center;
   color: #797979;
+  text-indent: 2em;
+}
+
+.course-assessment-name{
+  text-align: left;
 }
 
 /*icons*/

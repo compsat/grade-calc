@@ -1,49 +1,184 @@
 <head>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="style-nuncio.css">
-   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style-nuncio.css">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="big-box">
-    <div class="main-form">
+	<div class="big-box">
+		<div class="main-form">
 
-      <div class="icon-container">
-        <div class="left-icon">
-          <div class="square" id="fillicon-container">
-            <img class="icon" src="nuncio-fillicon.svg"></img>
-          </div>
-          <div class="square" id="rangeicon-container">
-            <img class="icon" src="nuncio-rangeicon.svg"></img>
-          </div>
-          <div class="square" id="reseticon-container">
-            <img class="icon" src="nuncio-reseticon.svg"></img>
-          </div>
-        </div>
+			<div class="modal-window" id="modal">
+				<div class="modal_content">
+			<div class="modal_header modal_padding">
+				<div class="modal_row">
+					Add Assessment
 
-        <div class="right-icon">
-          <div class="square" id="saveicon-container">
-            <img class="icon" src="nuncio-saveicon.svg"></img>
-          </div>
-        </div>
-      </div>
+					<a class="close_modal_btn">
+						<img src="x_icon.svg">
+					</a>
+				</div>
+			</div>
 
-      <img class="add-doc" src="nuncio-addDocument.svg"></img>
+			<form class="modal_component_form  modal_padding">
+				<div class="component_primary_information_row">
+					<div class="input_wrapper">
+						<input type="text" class="input_component name" name="name" required></input>
+						<span class="placeholder name">Major Assessment Name</span>
+					</div>
 
-      <p class="no-assess">No assessments</p>
-      <p class="create-new-assess">Create a new one now.</p>
+					<div class="input_wrapper percentage">
+						<input type="text" class="input_component percentage primary" name="percentage" required></input>
+						<div class="input_suffix percentage"></div>
+						<span class="placeholder percentage">Percentage</span>
+					</div>
+				</div>
+				<div class="form_row_container">
+					<div class="component_row" id="row_1">
+						<div class="input_wrapper">
+							<input type="text" class="input_component name" name="name" required></input>
+							<span class="placeholder name">Minor Assessment Name</span>
+						</div>
 
-      <button type="button" class="btn btn-outline-secondary">+ADD NEW ASSESSMENT </button>
-    </div>
+						<div class="input_wrapper percentage">
+							<input type="text" class="input_component percentage" name="percentage" required></input>
+							<div class="input_suffix percentage"></div>
+							<span class="placeholder percentage">Percentage</span>
+						</div>
 
-    <div class="outer-circle">
-      <div class="inner-circle">
-        <div class="inside-box">
-          <p class="letter-grade">B+</p>
-          <p class="number-grade">89.9%</p>
-          <p class="final-grade">Final Grade</p>
-        </div>
-      </div>
-    </div>
+						<div class="input_wrapper">
+							<input type="text" class="input_component numerical_result" name="numerical_result" required></input>
+							<span class="placeholder numerical_result">Numerical Result</span>
+						</div>
 
-  </div>
+						<div class="input_wrapper">
+							<select class="input_component letter" required>
+								<option disabled selected></option>
+								<option value="A">A</option>
+								<option value="B+">B+</option>
+								<option value="B">B</option>
+								<option value="C+">C+</option>
+								<option value="C">C</option>
+								<option value="D">D</option>
+								<option value="F">F</option>
+							</select>
+								<span class="placeholder letter">Letter Result</span>
+						</div>
+					</div>
+
+					<div class="component_row" id="row_2">
+						<div class="input_wrapper">
+							<input type="text" class="input_component name" name="name" required></input>
+							<span class="placeholder name">Minor Assessment Name</span>
+						</div>
+
+						<div class="input_wrapper percentage">
+							<input type="text" class="input_component percentage" name="percentage" required></input>
+							<div class="input_suffix percentage"></div>
+							<span class="placeholder percentage">Percentage</span>
+						</div>
+
+						<div class="input_wrapper">
+							<input type="text" class="input_component numerical_result" name="numerical_result" required></input>
+							<span class="placeholder numerical_result">Numerical Result</span>
+						</div>
+
+						<div class="input_wrapper">
+							<select class="input_component letter" required>
+								<option disabled selected></option>
+								<option value="A">A</option>
+								<option value="B+">B+</option>
+								<option value="B">B</option>
+								<option value="C+">C+</option>
+								<option value="C">C</option>
+								<option value="D">D</option>
+								<option value="F">F</option>
+							</select>
+								<span class="placeholder letter">Letter Result</span>
+						</div>
+					</div>
+
+					<div class="component_row" id="row_3">
+						<div class="input_wrapper">
+							<input type="text" class="input_component name" name="name" required></input>
+							<span class="placeholder name">Minor Assessment Name</span>
+						</div>
+
+						<div class="input_wrapper percentage">
+							<input type="text" class="input_component percentage" name="percentage" required></input>
+							<div class="input_suffix percentage"></div>
+							<span class="placeholder percentage">Percentage</span>
+						</div>
+
+						<div class="input_wrapper">
+							<input type="text" class="input_component numerical_result" name="numerical_result" required></input>
+							<span class="placeholder numerical_result">Numerical Result</span>
+						</div>
+
+						<div class="input_wrapper">
+							<select class="input_component letter" required>
+								<option disabled selected></option>
+								<option value="A">A</option>
+								<option value="B+">B+</option>
+								<option value="B">B</option>
+								<option value="C+">C+</option>
+								<option value="C">C</option>
+								<option value="D">D</option>
+								<option value="F">F</option>
+							</select>
+								<span class="placeholder letter">Letter Result</span>
+						</div>
+					</div>
+					<btn id="add_minor_assessment_btn" class="minor_assessment_btn">
+						<img class="plus-btn" src="plus-btn.svg">
+						ADD MINOR ASSESSMENT
+					</btn>
+
+				</div>
+				<btn id="id_add_component_btn" class="add_component_btn">
+					ADD
+				</btn>
+			</form>
+		</div>
+
+			</div>	
+			<div class="icon-container">
+				<div class="left-icon">
+					<div class="square" id="fillicon-container">
+						<img class="icon" src="nuncio-fillicon.svg"></img>
+					</div>
+					<div class="square" id="rangeicon-container">
+						<img class="icon" src="nuncio-rangeicon.svg"></img>
+					</div>
+					<div class="square" id="reseticon-container">
+						<img class="icon" src="nuncio-reseticon.svg"></img>
+					</div>
+				</div>
+
+				<div class="right-icon">
+					<div class="square" id="saveicon-container">
+						<img class="icon" src="nuncio-saveicon.svg"></img>
+					</div>
+				</div>
+			</div>
+
+			<img class="add-doc" src="nuncio-addDocument.svg"></img>
+
+			<p class="no-assess">No assessments</p>
+			<p class="create-new-assess">Create a new one now.</p>
+
+			<button id="main-add-assessment-btn" type="button" class="btn btn-outline-secondary">+ADD NEW ASSESSMENT </button>
+		</div>
+
+		<div class="outer-circle">
+			<div class="inner-circle">
+				<div class="inside-box">
+					<p class="letter-grade">B+</p>
+					<p class="number-grade">89.9%</p>
+					<p class="final-grade">Final Grade</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="section-js.js"></script>
 </body>

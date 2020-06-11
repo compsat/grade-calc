@@ -119,7 +119,15 @@ function appendComponentRow() {
 	lastComponentRow.after(newComponentRow);
 }
 
+function displayAssessmentModal() {
+	const modalDiv = document.getElementById("modal");
+	modalDiv.style.display = "flex";
+}
+
 window.onload = () => {
+	const addAssessmentBtn = document.getElementById("main-add-assessment-btn");
+	addAssessmentBtn.addEventListener("click", displayAssessmentModal);
+
 	numberOfMinorAssesments = 3;
 	letterGrades = ["A", "B+", "B", "C+", "C", "D", "F"];
 

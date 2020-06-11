@@ -74,7 +74,7 @@ td{
 }
 
 .opened-row td{
-  height: 20px;
+  height: 25px;
 }
 
 .content-row{
@@ -159,6 +159,9 @@ td{
 
 .hover-icon{
   display: flex;
+  position: relative;
+  left: 705px;
+  top: 66px;
 }
 
 .tiny-square{
@@ -169,6 +172,7 @@ td{
   background: #403E3E;
   border-radius: 3.41461px;
   justify-content: center;
+  margin-left: 3.82px;
 }
 
 .tiny-icon{

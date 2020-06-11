@@ -140,6 +140,24 @@ tr{
   margin: 15px;
 }
 
+.hover-icon{
+  display: flex;
+}
+
+.tiny-square{
+  position: inherit;
+  width: 13.75px;
+  height: 14.51px;
+  display: flex;
+  background: #403E3E;
+  border-radius: 3.41461px;
+  justify-content: center;
+}
+
+.tiny-icon{
+  margin: auto;
+}
+
 /*center add new document*/
 .add-doc{
   display: block;

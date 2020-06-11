@@ -59,6 +59,10 @@ tr{
   color: #262424;
 }
 
+td{
+  height: 38px;
+}
+
 .opened-row{
   font-family: IBM Plex Sans;
   font-style: normal;

@@ -3,7 +3,7 @@
 	flex-direction: column;
 
 	width: 800px;
-	height: 700px;
+	height: auto;
 
 	background: #DCDCDC;
 }
@@ -171,7 +171,7 @@
 }
 
 .form_row_container {
-	height: 510px;
+	height: 350px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: relative;
@@ -262,7 +262,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .add_component_btn {
-	margin-top: auto;
+	margin-top: 35px;
 	background: rgba(102, 99, 125, 0.9);
 
 
@@ -279,6 +279,9 @@ input[type="number"]::-webkit-inner-spin-button {
 	font-size: 1.7em;
 }
 
+.add_component_btn:hover {
+	cursor: pointer;
+}
 .input_suffix.percentage:before {
 	margin-top: 5px;
 }

@@ -286,3 +286,21 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin-top: 5px;
 }
 
+.minor_assessment_btn {
+	display: flex;
+	justify-content: center;
+	border: 3px dashed #B3B3B3;
+	border-radius: 21px;
+	padding: 15px 0px 15px 0px;
+	color: #797979;
+	font-family: "IBM Plex Sans";
+	align-items: center;
+}
+
+.minor_assessment_btn:hover {
+	cursor: pointer;
+}
+
+.plus-btn {
+	margin-right: 15px;
+}

@@ -123,6 +123,6 @@ window.onload = () => {
 	numberOfMinorAssesments = 3;
 	letterGrades = ["A", "B+", "B", "C+", "C", "D", "F"];
 
-	let addComponentButton = document.getElementById("id_add_component_btn");
+	let addComponentButton = document.getElementById("add_minor_assessment_btn");
 	addComponentButton.addEventListener("click", (event) => appendComponentRow());
 }

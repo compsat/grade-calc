@@ -166,23 +166,40 @@ html, body {
 }
 
 .modal-window {
-    display: none;
+    visibility: hidden;
+    display: flex;
     position: fixed;
     height: 100%;
     width: 967px;
     background: rgba(0, 0, 0, 0.65);
     z-index: 1;
     justify-content: center;
+
+    transition: visibility 0.2s;
 }
 
 .modal_content {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   width: 800px;
   height: auto;
 
+  bottom: 0px;
+
+  opacity: 1;
+  
   background: #DCDCDC;
+  border-radius: 3px;
+
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.modal_inactive {
+  opacity: 0;
+  bottom: 50px;
+  z-index: -1;
 }
 
 .modal_header {
@@ -200,6 +217,7 @@ html, body {
 
   padding-top: 15px;
   padding-bottom: 15px;
+  border-radius: 3px 3px 0px 0px;
 }
 
 .close_modal_btn:hover {

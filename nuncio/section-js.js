@@ -121,7 +121,16 @@ function appendComponentRow() {
 
 function displayAssessmentModal() {
 	const modalDiv = document.getElementById("modal");
-	modalDiv.style.display = "flex";
+	modalDiv.style.visibility = "visible";
+
+	document.getElementById("modal_content").classList.remove("modal_inactive");
+}
+
+function closeModal() {
+	const modalDiv = document.getElementById("modal");
+	modalDiv.style.visibility = "hidden";
+
+	document.getElementById("modal_content").classList.add("modal_inactive");
 }
 
 window.onload = () => {
@@ -133,4 +142,10 @@ window.onload = () => {
 
 	let addComponentButton = document.getElementById("add_minor_assessment_btn");
 	addComponentButton.addEventListener("click", (event) => appendComponentRow());
+
+	document.addEventListener("click", (event) => {
+		if (event.target.parentNode.className == "main-form" && event.target.className.match("btn") == null) {
+			closeModal();
+		}
+	}); 
 }

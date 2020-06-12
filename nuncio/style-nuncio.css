@@ -315,7 +315,7 @@ html, body {
   flex: 5;
 }
 
-.component_row *:not(:first-child) {
+.component_row *:not(:first-child):not(btn) {
   flex: 2;
 }
 
@@ -431,7 +431,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .placeholder.numerical_result {
-  left: 3%;
+  left: 5%;
+  font-size: 0.80em;
 }
 
 .input_component:focus ~ .placeholder,
@@ -445,6 +446,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: -80%;
 }
 
+
 .input_component:not(.numerical_result):not(.name):not(.primary):focus ~ .placeholder,
 .input_component:not(.numerical_result):not(.name):not(.primary):not(:focus):valid ~ .placeholder
  {
@@ -453,7 +455,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .input_component.numerical_result:focus ~ .placeholder,
 .input_component.numerical_result:not(:focus):valid ~ .placeholder {
-  left: 9%;
+  left: 5%;
 }
 
 .add_component_btn {
@@ -498,4 +500,28 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .plus-btn {
   margin-right: 15px;
+}
+
+
+.close_row_img {
+  margin-top: 15px;
+}
+
+.component_row:not(:first-of-type):hover > .close_row_btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.component_row {
+  padding-right: 10px;
+}
+
+.close_row_btn {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s;
+}
+
+btn:hover {
+  cursor: pointer;
 }

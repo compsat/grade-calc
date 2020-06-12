@@ -102,11 +102,21 @@ function componentRow() {
 	componentLetterResultWrapper.appendChild(componentLetterResultDropDown);
 	componentLetterResultWrapper.appendChild(componentLetterResultPlaceholder);
 
+	let closeRowBtn = document.createElement("BTN");
+	closeRowBtn.className = "close_row_btn";
+
+	let closeRowBtnImg = document.createElement("IMG");
+	closeRowBtnImg.src = "delete_row_icon.svg";
+	closeRowBtnImg.className = "close_row_img";
+
+	closeRowBtn.appendChild(closeRowBtnImg);
+
 	/* Add all inputs to row */
 	componentRow.appendChild(componentNameWrapper);
 	componentRow.appendChild(componentPercentageWrapper);
 	componentRow.appendChild(componentNumericalResultWrapper);
 	componentRow.appendChild(componentLetterResultWrapper);
+	componentRow.appendChild(closeRowBtn);
 
 
 	return componentRow;

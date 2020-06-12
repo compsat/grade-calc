@@ -525,3 +525,16 @@ input[type="number"]::-webkit-inner-spin-button {
 btn:hover {
   cursor: pointer;
 }
+
+.error_text {
+  position: absolute;
+  top: 75%;
+  left: 10px;
+  font-size: 0.9em;
+  color: #E06666;
+  font-weight: bold;
+}
+
+.component_row {
+  padding-bottom: 30px;
+}

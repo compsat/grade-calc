@@ -137,7 +137,7 @@ window.onload = () => {
 	const addAssessmentBtn = document.getElementById("main-add-assessment-btn");
 	addAssessmentBtn.addEventListener("click", displayAssessmentModal);
 
-	numberOfMinorAssesments = 3;
+	numberOfMinorAssesments = 1;
 	letterGrades = ["A", "B+", "B", "C+", "C", "D", "F"];
 
 	let addComponentButton = document.getElementById("add_minor_assessment_btn");

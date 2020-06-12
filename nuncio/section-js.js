@@ -143,6 +143,40 @@ function closeModal() {
 	document.getElementById("modal_content").classList.add("modal_inactive");
 }
 
+function validateNumericalResultField() {
+	const field = this;
+
+	//check if valid
+	let value = field.value;
+
+	if (value.match("[a-zA-Z]+") || parseInt(value.split("/")[0], 10) > parseInt(value.split("/")[1], 10)) {
+		field.style.borderColor = "#E06666";
+
+		const errorText = field.parentNode.querySelector(".error_text");
+		errorText.innerHTML = "Invalid!"
+	} else {
+		field.style.borderColor = "#67647E";
+		const errorText = field.parentNode.querySelector(".error_text");
+		errorText.innerHTML = "";
+	}
+}
+
+function updateAutoCompletePlaceholder() {
+	const correspondingPlaceholder = this.parentNode.querySelector(".input_autocomplete");
+
+	if (!this.value || this.value.length == 0) {
+		correspondingPlaceholder.placeholder = "";
+	} else if (!this.value.match("^[0-9]+ */.*$")) {
+		correspondingPlaceholder.placeholder = `${this.value} /`;
+	} else if (this.value.match("^[0-9]+ */.*$")) {
+		correspondingPlaceholder.placeholder = "";
+	}
+
+	if (this.value.match("^[0-9a-zA-Z^/]+$") && this.value.length > 9) {
+		correspondingPlaceholder.placeholder = "";
+	}
+
+}
 window.onload = () => {
 	const addAssessmentBtn = document.getElementById("main-add-assessment-btn");
 	addAssessmentBtn.addEventListener("click", displayAssessmentModal);
@@ -158,4 +192,12 @@ window.onload = () => {
 			closeModal();
 		}
 	}); 
+
+	let numericalResultRow = document.getElementsByClassName("input_component numerical_result")[0];
+	numericalResultRow.addEventListener("input", (event) => {
+		updateAutoCompletePlaceholder.call(event.target);
+	})
+
+	numericalResultRow.addEventListener("blur", validateNumericalResultField.bind(numericalResultRow));
+
 }

@@ -3,37 +3,26 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="filled-assessments">
-  <div class="black-rectangle">
-  </div>
+<div class="main-form">
 
   <div class="icon-container">
     <div class="left-icon">
-      <div class="black-square" id="fillicon-container">
-            <img class="black-icon" src="nuncio-fillicon.svg"></img>
+      <div class="square" id="fillicon-container">
+            <img class="icon" src="nuncio-fillicon.svg"></img>
       </div>
-      <div class="black-square" id="rangeicon-container">
-        <img class="black-icon" src="nuncio-rangeicon.svg"></img>
+      <div class="square" id="rangeicon-container">
+        <img class="icon" src="nuncio-rangeicon.svg"></img>
       </div>
-      <div class="black-square" id="reseticon-container">
-        <img class="black-icon" src="nuncio-reseticon.svg"></img>
+      <div class="square" id="reseticon-container">
+        <img class="icon" src="nuncio-reseticon.svg"></img>
       </div>
     </div>
 
     <div class="right-icon">
-      <div class="black-square" id="saveicon-container">
-        <img class="black-icon" src="nuncio-saveicon.svg"></img>
+      <div class="square" id="saveicon-container">
+        <img class="icon" src="nuncio-saveicon.svg"></img>
       </div>
     </div>
-  </div>
-
-  <div class="hover-icon">
-      <div class="tiny-square" id="editicon-container">
-        <img class="tiny-icon" src="nuncio-editicon.svg"></img>
-      </div>
-      <div class="tiny-square" id="deleteicon-container">
-        <img class="tiny-icon" src="nuncio-deleteicon.svg"></img>
-      </div>
   </div>
 
   <div class="assess-table">
@@ -42,49 +31,115 @@
           <tr>
             <th class="course-assessment-name">Course Assessment Page</th>
             <th>Assessment Percentage</th>
-            <th>Group Percentage</th>
+            <th class="result-assessment">Result Percentage</th>
           </tr>
       </thead>
       <tbody>
-        <tr class="opened-row">
-          <td class="course-assessment-name"><img src="nuncio-blacktriangledown.svg"></img> Quizzes</td>
-          <td>30%</td>
-          <td>23%</td>
-        </tr>
-        <tr class="content-row">
-          <td class="course-assessment-name">Quizz 1</td>
-          <td>10%</td>
-          <td>10%</td>
-        </tr>
-        <tr class="content-row">
-          <td class="course-assessment-name">Quizz 1</td>
-          <td>10%</td>
-          <td>7%</td>
-        </tr>
-        <tr class="content-row">
-          <td class="course-assessment-name">Quizz 1</td>
-          <td>10%</td>
-          <td>6%</td>
-        </tr>
         <tr>
-          <td class="course-assessment-name"><img src="nuncio-blacktriangleright.svg"></img> Long Exams</td>
-          <td>20%</td>
-          <td>19%</td>
-        </tr>
-        <tr>
-          <td class="course-assessment-name"><img src="nuncio-blacktriangleright.svg"></img> Oral Exams</td>
-          <td>30%</td>
-          <td>28.5%</td>
-        </tr>
-        <tr>
-          <td class="course-assessment-name"><img src="nuncio-blacktriangleright.svg"></img> Seatwork</td>
+          <td class="course-assessment-name"><img src="nuncio-triangledown.svg"></img> Quizzes</td>
           <td>15%</td>
-          <td>13.4%</td>
+          <td>
+            <div class="hover-cell">14% &nbsp&nbsp&nbsp
+              <div class="hover-icon">
+                <div class="tiny-square" id="editicon-container">
+                  <img class="tiny-icon" src="nuncio-editicon.svg"></img>
+                </div>
+                <div class="tiny-square" id="deleteicon-container">
+                  <img class="tiny-icon" src="nuncio-deleteicon.svg"></img>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="content-row">
+          <td class="course-assessment-name">Quizz 1</td>
+          <td>7.5%</td>
+          <td class="result-assessment">7%</td>
+        </tr>
+        <tr class="content-row">
+          <td class="course-assessment-name">Quizz 2</td>
+          <td>7.5%</td>
+          <td class="result-assessment">7%</td>
         </tr>
         <tr>
-          <td class="course-assessment-name"><img src="nuncio-blacktriangleright.svg"></img> Homework</td>
-          <td>5%</td>
-          <td>5%</td>
+          <td class="course-assessment-name"><img src="nuncio-triangleright.svg"></img> Quizzes</td>
+          <td>15%</td>
+          <td>
+            <div class="hover-cell">14% &nbsp&nbsp&nbsp
+              <div class="hover-icon">
+                <div class="tiny-square" id="editicon-container">
+                  <img class="tiny-icon" src="nuncio-editicon.svg"></img>
+                </div>
+                <div class="tiny-square" id="deleteicon-container">
+                  <img class="tiny-icon" src="nuncio-deleteicon.svg"></img>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="course-assessment-name"><img src="nuncio-triangleright.svg"></img> Quizzes</td>
+          <td>15%</td>
+          <td>
+            <div class="hover-cell">14% &nbsp&nbsp&nbsp
+              <div class="hover-icon">
+                <div class="tiny-square" id="editicon-container">
+                  <img class="tiny-icon" src="nuncio-editicon.svg"></img>
+                </div>
+                <div class="tiny-square" id="deleteicon-container">
+                  <img class="tiny-icon" src="nuncio-deleteicon.svg"></img>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="course-assessment-name"><img src="nuncio-triangleright.svg"></img> Quizzes</td>
+          <td>15%</td>
+          <td>
+            <div class="hover-cell">14% &nbsp&nbsp&nbsp
+              <div class="hover-icon">
+                <div class="tiny-square" id="editicon-container">
+                  <img class="tiny-icon" src="nuncio-editicon.svg"></img>
+                </div>
+                <div class="tiny-square" id="deleteicon-container">
+                  <img class="tiny-icon" src="nuncio-deleteicon.svg"></img>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="course-assessment-name"><img src="nuncio-triangleright.svg"></img> Quizzes</td>
+          <td>15%</td>
+          <td>
+            <div class="hover-cell">14% &nbsp&nbsp&nbsp
+              <div class="hover-icon">
+                <div class="tiny-square" id="editicon-container">
+                  <img class="tiny-icon" src="nuncio-editicon.svg"></img>
+                </div>
+                <div class="tiny-square" id="deleteicon-container">
+                  <img class="tiny-icon" src="nuncio-deleteicon.svg"></img>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="course-assessment-name"><img src="nuncio-triangleright.svg"></img> Quizzes</td>
+          <td>15%</td>
+          <td>
+            <div class="hover-cell">14% &nbsp&nbsp&nbsp
+              <div class="hover-icon">
+                <div class="tiny-square" id="editicon-container">
+                  <img class="tiny-icon" src="nuncio-editicon.svg"></img>
+                </div>
+                <div class="tiny-square" id="deleteicon-container">
+                  <img class="tiny-icon" src="nuncio-deleteicon.svg"></img>
+                </div>
+              </div>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>

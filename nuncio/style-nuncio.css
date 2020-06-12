@@ -10,89 +10,73 @@ html, body {
 }
 
 .main-form{
-  width: 967px;
-  height: 669px;
-
+  width: 882.7px;
+  height: 655.2px;
+  padding-top: 13.8px;
+  padding-left: 42.3px;
+  padding-right: 42px;
   background: #FAFAFA;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
 
-.filled-assessments{
-  position: absolute;
-  width: 817px;
-  height: 427px;
-  left: 36px;
-  top: 258px;
-
-  background: #FAFAFA;
-}
-
-.black-rectangle{
+/* the table*/
+.assess-table table{
   width: 100%;
-  height: 8px;
-
-  background: #403E3E;
-}
-
-table{
-  width: 744px;
-  margin: auto;
   text-align: center;
 }
 
-th{
+.assess-table th{
   font-family: IBM Plex Sans;
   font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 22px;
   line-height: 150%;
   color: #262424;
+
   height: 42px;
 }
 
-tr{
+.assess-table tr{
   font-family: IBM Plex Sans;
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 175%;
-  color: #262424;
-}
-
-td{
-  height: 42px;
-}
-
-.opened-row{
-  font-family: IBM Plex Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 20px;
   line-height: 100%;
   color: #262424;
 }
 
-.opened-row td{
-  height: 25px;
-}
-
-.content-row{
-  font-family: IBM Plex Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 100%;
-  color: #797979;
-  text-indent: 2em;
+.assess-table td{
+  height: 42px;
 }
 
 .content-row td{
-  height: 20px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  color: #797979;
+  text-indent: 1.5em;
+  height: 30px;
+}
+
+.content-row .result-assessment{
+  text-align: center;
+  text-indent: 4em;
 }
 
 .course-assessment-name{
   text-align: left;
+}
+
+.hover-cell{
+  display: flex;
+  float: right;
+}
+
+.result-assessment{
+  text-align: right;
 }
 
 /*icons*/
@@ -110,7 +94,7 @@ td{
   background-color: #FAFAFA;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
 }
 
@@ -118,20 +102,17 @@ td{
   position: inherit;
   width: 33.39px;
   height: 33.39px;
-  left: 181.64px;
-  top: 341.83px;
   display: flex;
   border-radius: 4px;
   margin: auto;
 }
 
-.black-icon{
-  position: inherit;
-  width: 22.76px;
-  height: 22.76px;
-  display: flex;
-  border-radius: 4px;
-  margin: auto;
+#fillicon-container{
+  margin-left: 0;
+}
+
+.right-icon .square{
+  margin-right: 0;
 }
 
 .square{
@@ -146,37 +127,26 @@ td{
   margin: 15px;
 }
 
-.black-square{
-  position: inherit;
-  width: 37.25px;
-  height: 37.25px;
-
-  background: #403E3E;
-  border-radius: 3.02646px;
-  display: flex;
-  margin: 15px;
-}
-
 .hover-icon{
   display: flex;
-  position: relative;
-  left: 705px;
-  top: 66px;
+  opacity:0;
+}
+
+.hover-icon:hover{
+  opacity: 1;
 }
 
 .tiny-square{
-  position: inherit;
-  width: 13.75px;
-  height: 14.51px;
-  display: flex;
-  background: #403E3E;
-  border-radius: 3.41461px;
-  justify-content: center;
-  margin-left: 3.82px;
-}
+  width: 17.54px;
+  height: 18.51px;
+  background: #663C67;
+  border-radius: 4px;
 
-.tiny-icon{
-  margin: auto;
+  position: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4.87px;
 }
 
 /*center add new document*/

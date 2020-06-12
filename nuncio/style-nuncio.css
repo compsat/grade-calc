@@ -132,7 +132,7 @@ html, body {
   opacity:0;
 }
 
-.hover-icon:hover{
+tr:hover .hover-icon{
   opacity: 1;
 }
 

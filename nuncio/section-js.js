@@ -1,8 +1,30 @@
+//polyfill for epsilon used in percentage rounding
+if (Number.EPSILON === undefined) {
+    Number.EPSILON = Math.pow(2, -52);
+}
+
+
+gradeDictionary = {
+	"A" : "92-100",
+	"B+" : "87-91",
+	"B" : "80-86",
+	"C+" : "75-79",
+	"C" : "68-74",
+	"D" : "60-67",
+	"F" : "<60"
+}
+
 function generatePlaceHolderSelectOption() {
 	let option = document.createElement("OPTION");
 	option.disabled = true;
 
 	return option;
+}
+
+function getErrorText() {
+	let errorText = document.createElement("P");
+	errorText.className = "error_text";
+	return errorText;
 }
 
 function componentRow() {
@@ -15,7 +37,7 @@ function componentRow() {
 
 	/* Construction of minor assesment name input */
 	let componentNameWrapper = document.createElement("DIV");
-	componentNameWrapper.className = "input_wrapper";
+	componentNameWrapper.className = "input_wrapper name";
 
 	let componentNameInput = document.createElement("INPUT");
 	componentNameInput.className = "input_component name";
@@ -29,6 +51,7 @@ function componentRow() {
 
 	componentNameWrapper.appendChild(componentNameInput);
 	componentNameWrapper.appendChild(componentNamePlaceholder);
+	componentNameWrapper.appendChild(getErrorText());
 
 
 	/* Construction of minor assessment percentage */
@@ -40,6 +63,7 @@ function componentRow() {
 	componentPercentageInput.type = "text";
 	componentPercentageInput.name = "percentage";
 	componentPercentageInput.required = true;
+	componentPercentageInput.addEventListener("input", validatePercentageField.bind(componentPercentageInput));
 
 	let componentPercentagePlaceholder = document.createElement("SPAN");
 	componentPercentagePlaceholder.className = "placeholder percentage";
@@ -51,6 +75,7 @@ function componentRow() {
 	componentPercentageWrapper.appendChild(componentPercentageInput);
 	componentPercentageWrapper.appendChild(componentPercentageSuffix);
 	componentPercentageWrapper.appendChild(componentPercentagePlaceholder);
+	componentPercentageWrapper.appendChild(getErrorText());
 
 
 	/* Construction of minor assessment numerical result */
@@ -63,6 +88,7 @@ function componentRow() {
 	componentNumericalResultInput.type = "text";
 	componentNumericalResultInput.name ="numerical_result";
 	componentNumericalResultInput.required = true;
+	componentNumericalResultInput.addEventListener("input", validateNumericalResultField.bind(componentNumericalResultInput));
 
 	let componentNumericalResultPlaceholder = document.createElement("SPAN");
 	componentNumericalResultPlaceholder.className = "placeholder numerical_result";
@@ -70,6 +96,7 @@ function componentRow() {
 
 	componentNumericalResultWrapper.appendChild(componentNumericalResultInput);
 	componentNumericalResultWrapper.appendChild(componentNumericalResultPlaceholder);
+	componentNumericalResultWrapper.appendChild(getErrorText());
 
 
 	/* Construction of minor assessment letter result */
@@ -95,12 +122,16 @@ function componentRow() {
 
 	componentLetterResultDropDown.selectedIndex = 0;
 
+	componentLetterResultDropDown.addEventListener("change", emptyOtherInputs.bind(componentLetterResultDropDown));
+
+
 	let componentLetterResultPlaceholder = document.createElement("SPAN");
 	componentLetterResultPlaceholder.className = "placeholder letter";
 	componentLetterResultPlaceholder.innerHTML = "Letter Result";
 
 	componentLetterResultWrapper.appendChild(componentLetterResultDropDown);
 	componentLetterResultWrapper.appendChild(componentLetterResultPlaceholder);
+	componentLetterResultWrapper.appendChild(getErrorText());
 
 	let closeRowBtn = document.createElement("BTN");
 	closeRowBtn.className = "close_row_btn";
@@ -143,21 +174,31 @@ function closeModal() {
 	document.getElementById("modal_content").classList.add("modal_inactive");
 }
 
+function invalidateField() {
+	field = this;
+	field.style.borderColor = "#E06666";
+
+	const errorText = field.parentNode.querySelector(".error_text");
+	errorText.innerHTML = "Invalid!"
+}
+
 function validateNumericalResultField() {
 	const field = this;
 
 	//check if valid
 	let value = field.value;
 
-	if (value.match("[a-zA-Z]+") || parseInt(value.split("/")[0], 10) > parseInt(value.split("/")[1], 10)) {
-		field.style.borderColor = "#E06666";
-
-		const errorText = field.parentNode.querySelector(".error_text");
-		errorText.innerHTML = "Invalid!"
+	//format check
+	if (value.match("[a-zA-Z]+") || !value.match("[0-9]+/[0-9]+")) {
+		invalidateField.call(this);
+	//value check 
+	} else if (parseInt(value.split("/")[0]) > parseInt(value.split("/")[1])) { 
+		invalidateField.call(this);
 	} else {
 		field.style.borderColor = "#67647E";
 		const errorText = field.parentNode.querySelector(".error_text");
 		errorText.innerHTML = "";
+		emptyOtherInputs.call(this);
 	}
 }
 
@@ -177,12 +218,66 @@ function updateAutoCompletePlaceholder() {
 	}
 
 }
+
+function updatePercentageInput() {
+	const percentageInput = this.parentNode.parentNode.querySelector(".input_component.percentage");
+	if (this.tagName === "INPUT") {
+		if (this.value.match("/")) {
+			const scoreOfStudent = parseInt(this.value.split("/")[0]);
+			const totalScore = parseInt(this.value.split("/")[1]);
+
+			let rawPercentage = scoreOfStudent / totalScore;
+			let roundedPercentage = Math.round((rawPercentage + Number.EPSILON) * 10000) / 100;
+			percentageInput.value = roundedPercentage;
+		} 
+	} else if (this.tagName == "SELECT") {
+		const letterGrade = this[this.selectedIndex].value;
+		const gradeInterval = gradeDictionary[letterGrade];
+		percentageInput.value = gradeInterval;
+	}
+}
+
+function emptyOtherInputs() {
+	const lastInput = this;
+
+	const inputsToClear = Array.from(this.parentNode.parentNode.querySelectorAll(".input_component:not(.name)"));
+	
+	inputsToClear.forEach((input) => {
+		if (input === this) {
+			return;
+		}
+
+		if (input.tagName == "INPUT") {
+			input.value = "";
+		} else if (input.tagName == "SELECT") {
+			input.selectedIndex = 0;
+		}
+	});
+
+	updatePercentageInput.call(this);
+}
+
+function validatePercentageField() {
+	const field = this;
+
+	if (field.value.match("[^0-9]+") && !field.value.match("[0-9]+ *- *0-9]+") && !(field.value.match("< *[0-9]+"))) {
+		invalidateField.call(this);
+	} else if (parseInt(field.value, 10) > 100) {
+		invalidateField.call(this);
+	} else {
+		field.style.borderColor = "#67647E";
+		const errorText = field.parentNode.querySelector(".error_text");
+		errorText.innerHTML = "";
+		emptyOtherInputs.call(this);
+	}
+}
+
 window.onload = () => {
 	const addAssessmentBtn = document.getElementById("main-add-assessment-btn");
 	addAssessmentBtn.addEventListener("click", displayAssessmentModal);
 
 	numberOfMinorAssesments = 1;
-	letterGrades = ["A", "B+", "B", "C+", "C", "D", "F"];
+	letterGrades = Object.keys(gradeDictionary);
 
 	let addComponentButton = document.getElementById("add_minor_assessment_btn");
 	addComponentButton.addEventListener("click", (event) => appendComponentRow());
@@ -198,6 +293,12 @@ window.onload = () => {
 		updateAutoCompletePlaceholder.call(event.target);
 	})
 
-	numericalResultRow.addEventListener("blur", validateNumericalResultField.bind(numericalResultRow));
+	numericalResultRow.addEventListener("input", validateNumericalResultField.bind(numericalResultRow));
 
+	let percentageInput = document.querySelector(".input_component.percentage:not(.primary)");
+	percentageInput.addEventListener("input", validatePercentageField.bind(percentageInput));
+
+	let gradeLetterInput = document.querySelector(".input_component.letter");
+	gradeLetterInput.addEventListener("change", emptyOtherInputs.bind(gradeLetterInput));
+	
 }

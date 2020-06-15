@@ -441,6 +441,12 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 0.75em;
 }
 
+.input_component:invalid {
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+
 .input_component:focus:not(.primary) ~ .placeholder,
 .input_component:not(:focus):not(.primary):valid ~ .placeholder {
   top: -80%;

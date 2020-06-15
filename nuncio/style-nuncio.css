@@ -534,11 +534,14 @@ btn:hover {
 
 .error_text {
   position: absolute;
-  top: 75%;
-  left: 10px;
-  font-size: 0.9em;
+  left: 10px; 
   color: #E06666;
   font-weight: bold;
+}
+
+.error_text.minor {
+  font-size: 0.9em;
+  top: 75%;
 }
 
 .component_row {
@@ -559,4 +562,17 @@ btn:hover {
 .input_component.numerical_result {
   z-index: 1;
   position: relative;
+}
+
+.error_text.major {
+  top: 60%;
+  font-size: 0.8em;
+}
+
+.input_component.letter {
+  font-size: 0.85em;
+}
+
+.input_wrapper.name {
+  min-height: 70.4px;
 }

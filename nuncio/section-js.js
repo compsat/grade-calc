@@ -5,13 +5,18 @@ if (Number.EPSILON === undefined) {
 
 
 gradeDictionary = {
-	"A" : "92-100",
-	"B+" : "87-91",
-	"B" : "80-86",
-	"C+" : "75-79",
-	"C" : "68-74",
-	"D" : "60-67",
-	"F" : "<60"
+	"A": "100",
+	"B Lower Bound": "86",
+	"B Upper Bound": "80",
+	"B+ Lower Bound": "91",
+	"B+ Upper Bound": "87",
+	"C Lower Bound": "74",
+	"C Upper Bound": "68",
+	"C+ Lower Bound": "79",
+	"C+ Upper Bound": "75",
+	"D Lower Bound": "67",
+	"D Upper Bound": "60",
+	"F": "<60"
 }
 
 function generatePlaceHolderSelectOption() {
@@ -106,22 +111,8 @@ function componentRow() {
 	let componentLetterResultDropDown = document.createElement("SELECT");
 	componentLetterResultDropDown.className = "input_component letter";
 	componentLetterResultDropDown.required = true;
-
-	componentLetterResultDropDown.appendChild(generatePlaceHolderSelectOption());
-
-	/* Generate list of option nodes for all letter grades */
-	dropDownOptions = letterGrades.map((grade) => {
-		const option = document.createElement("OPTION");
-		option.innerHTML = grade;
-		option.value = grade;
-		return option;
-	});
-
-
-	dropDownOptions.forEach((option) => componentLetterResultDropDown.appendChild(option));
-
+	loadGradeDropDown.call(componentLetterResultDropDown);
 	componentLetterResultDropDown.selectedIndex = 0;
-
 	componentLetterResultDropDown.addEventListener("change", emptyOtherInputs.bind(componentLetterResultDropDown));
 
 
@@ -152,6 +143,15 @@ function componentRow() {
 
 
 	return componentRow;
+}
+
+function submitForm() {
+	//get major percentage
+	const majorPercentageInput = document.getElementById("major_percentage");
+
+	if (!majorPercentageInput.value || majorPercentageInput.value.length == 0) {
+		majorPercentageInput.style.borderColor = "#E06666";
+	}
 }
 
 function appendComponentRow() {
@@ -238,9 +238,7 @@ function updatePercentageInput() {
 			percentageInput.value = roundedPercentage;
 		} 
 	} else if (this.tagName == "SELECT") {
-		const letterGrade = this[this.selectedIndex].value;
-		const gradeInterval = gradeDictionary[letterGrade];
-		percentageInput.value = gradeInterval;
+		percentageInput.value = this[this.selectedIndex].value;
 	}
 }
 
@@ -279,6 +277,20 @@ function validatePercentageField() {
 	}
 }
 
+function loadGradeDropDown() {
+	let defaultOption = document.createElement("OPTION");
+	defaultOption.disabled = true;
+	
+	this.appendChild(defaultOption);
+	Object.keys(gradeDictionary).forEach((grade) => {
+		const option = document.createElement("OPTION");
+		option.innerHTML = grade;
+		option.value = gradeDictionary[grade];
+		this.appendChild(option);
+	});
+
+	this.selectedIndex = 0;
+}
 window.onload = () => {
 	const addAssessmentBtn = document.getElementById("main-add-assessment-btn");
 	addAssessmentBtn.addEventListener("click", displayAssessmentModal);
@@ -307,5 +319,5 @@ window.onload = () => {
 
 	let gradeLetterInput = document.querySelector(".input_component.letter");
 	gradeLetterInput.addEventListener("change", emptyOtherInputs.bind(gradeLetterInput));
-	
+	loadGradeDropDown.call(gradeLetterInput);
 }

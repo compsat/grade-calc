@@ -141,6 +141,7 @@ function componentRow() {
 	closeRowBtnImg.className = "close_row_img";
 
 	closeRowBtn.appendChild(closeRowBtnImg);
+	closeRowBtn.addEventListener("click", deleteCorrespondingRow.bind(closeRowBtn));
 
 	/* Add all inputs to row */
 	componentRow.appendChild(componentNameWrapper);
@@ -180,6 +181,12 @@ function invalidateField() {
 
 	const errorText = field.parentNode.querySelector(".error_text");
 	errorText.innerHTML = "Invalid!"
+}
+
+function deleteCorrespondingRow() {
+	const row = this.parentNode;
+	row.parentNode.removeChild(row);
+	numberOfMinorAssesments--;
 }
 
 function validateNumericalResultField() {

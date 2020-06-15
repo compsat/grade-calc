@@ -320,4 +320,7 @@ window.onload = () => {
 	let gradeLetterInput = document.querySelector(".input_component.letter");
 	gradeLetterInput.addEventListener("change", emptyOtherInputs.bind(gradeLetterInput));
 	loadGradeDropDown.call(gradeLetterInput);
+
+	let majorPercentageInput = document.getElementById("major_percentage");
+	majorPercentageInput.addEventListener("input", validatePercentageField.bind(majorPercentageInput));
 }

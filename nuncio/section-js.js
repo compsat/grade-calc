@@ -28,7 +28,7 @@ function generatePlaceHolderSelectOption() {
 
 function getErrorText() {
 	let errorText = document.createElement("P");
-	errorText.className = "error_text";
+	errorText.className = "error_text minor";
 	return errorText;
 }
 
@@ -172,6 +172,8 @@ function closeModal() {
 	const modalDiv = document.getElementById("modal");
 	modalDiv.style.visibility = "hidden";
 
+	Array.from(document.getElementById("modal_content").querySelectorAll("input")).forEach((input) => input.value = "");
+	Array.from(document.getElementById("modal_content").querySelectorAll("select")).forEach((select) => select.selectedIndex = 0);
 	document.getElementById("modal_content").classList.add("modal_inactive");
 }
 
@@ -291,6 +293,59 @@ function loadGradeDropDown() {
 
 	this.selectedIndex = 0;
 }
+
+function submitForm() {
+	const rows = Array.from(document.getElementsByClassName("form_row_container")[0].querySelectorAll(".component_row"));
+	let formIsValid = true;
+	let formInfo = {};
+
+	row = document.getElementsByClassName("component_primary_information_row")[0];
+	if (validateRow(row)) {
+			const componentName = row.querySelector(".input_component.name").value;
+			const componentPercentage = row.querySelector(".input_component.percentage").value;
+			formInfo[componentName] = componentPercentage;
+	} else {
+			formIsValid = false;
+	}
+
+	rows.forEach((row) => {
+		if (validateRow(row)) {
+			const componentName = row.querySelector(".input_component.name").value;
+			const componentPercentage = row.querySelector(".input_component.percentage").value;
+			formInfo[componentName] = componentPercentage;
+		} else {
+			formIsValid = false;
+		}
+	});
+	
+	if (formIsValid) {
+		alert(`GRADE SUMMARY : ${JSON.stringify(formInfo)}`);
+		closeModal();
+	}
+}
+
+function resetErrorInformation(row) {
+	Array.from(row.querySelectorAll(".input_component.name ~ .error_text")).forEach((pTag) => pTag.innerHTML = "");
+	Array.from(row.querySelectorAll(".input_component.name")).forEach((input) => input.style.borderColor = "#67647E");
+}
+
+function validateRow(row) {
+	resetErrorInformation(row);
+	const componentNameInput = row.querySelector(".input_component.name");
+	const componentPercentageInput = row.querySelector(".input_component.percentage");
+
+	const componentName = row.querySelector(".input_component.name").value;
+	const componentPercentage = row.querySelector(".input_component.percentage").value;
+	if ((!componentName || componentName.length == 0) || (!componentPercentage || componentPercentage.length == 0)) {
+		componentNameInput.parentNode.querySelector(".error_text").innerHTML = "This component has missing information!";
+		return false;
+	} else if (componentPercentageInput.style.borderColor == "rgb(224, 102, 102)") {
+		componentNameInput.parentNode.querySelector(".error_text").innerHTML = "This component has invalid information!";
+		return false;
+	}
+	return true;
+}
+
 window.onload = () => {
 	const addAssessmentBtn = document.getElementById("main-add-assessment-btn");
 	addAssessmentBtn.addEventListener("click", displayAssessmentModal);
@@ -323,4 +378,10 @@ window.onload = () => {
 
 	let majorPercentageInput = document.getElementById("major_percentage");
 	majorPercentageInput.addEventListener("input", validatePercentageField.bind(majorPercentageInput));
+
+	let addBtn = document.getElementById("id_add_component_btn");
+	addBtn.addEventListener("click", submitForm);
+
+	let closeModalBtn = document.getElementsByClassName("close_modal_btn")[0];
+	closeModalBtn.addEventListener("click", closeModal);
 }

@@ -1,4 +1,5 @@
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style-nuncio.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -36,7 +37,7 @@
       </thead>
       <tbody>
         <tr>
-          <td class="course-assessment-name"><img src="nuncio-triangledown.svg"></img> Quizzes</td>
+          <td class="course-assessment-name"><a data-toggle="collapse" href="#MinorAssessments1" role="button" aria-expanded="false" aria-controls="MinorAssessments1"><img src="nuncio-triangledown.svg"></img></a> Quizzes</td>
           <td>15%</td>
           <td>
             <div class="hover-cell">14% &nbsp&nbsp&nbsp
@@ -51,16 +52,18 @@
             </div>
           </td>
         </tr>
-        <tr class="content-row">
-          <td class="course-assessment-name">Quizz 1</td>
-          <td>7.5%</td>
-          <td class="result-assessment">7%</td>
-        </tr>
-        <tr class="content-row">
-          <td class="course-assessment-name">Quizz 2</td>
-          <td>7.5%</td>
-          <td class="result-assessment">7%</td>
-        </tr>
+        <div class="collapse" id="MinorAssessments1">
+          <tr class="content-row">
+            <td class="course-assessment-name">Quizz 1</td>
+            <td>7.5%</td>
+            <td class="result-assessment">7%</td>
+          </tr>
+          <tr class="content-row">
+            <td class="course-assessment-name">Quizz 2</td>
+            <td>7.5%</td>
+            <td class="result-assessment">7%</td>
+          </tr>
+        </div>
         <tr>
           <td class="course-assessment-name"><img src="nuncio-triangleright.svg"></img> Quizzes</td>
           <td>15%</td>

@@ -50,7 +50,11 @@ html, body {
   height: 42px;
 }
 
-.content-row td{
+.triangle:visited{
+  transform: rotate(90deg);
+}
+
+#MinorAssessments1 td{
   font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: normal;
@@ -61,7 +65,7 @@ html, body {
   height: 30px;
 }
 
-.content-row .result-assessment{
+#MinorAssessments1 .result-assessment{
   text-align: center;
   text-indent: 4em;
 }
@@ -132,7 +136,7 @@ html, body {
   opacity:0;
 }
 
-tr:hover .hover-icon{
+.assess-table tr:hover .hover-icon{
   opacity: 1;
 }
 

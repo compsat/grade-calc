@@ -50,11 +50,11 @@ html, body {
   height: 42px;
 }
 
-.triangle:visited{
+.triangle:active{
   transform: rotate(90deg);
 }
 
-#MinorAssessments1 td{
+.assess-table .collapse td{
   font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: normal;
@@ -65,7 +65,7 @@ html, body {
   height: 30px;
 }
 
-#MinorAssessments1 .result-assessment{
+.assess-table .collapse .result-assessment{
   text-align: center;
   text-indent: 4em;
 }

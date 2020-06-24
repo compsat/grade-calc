@@ -54,7 +54,7 @@ html, body {
   transform: rotate(90deg);
 }
 
-.assess-table .collapse td{
+.assess-table .collapsible td{
   font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: normal;
@@ -65,7 +65,7 @@ html, body {
   height: 30px;
 }
 
-.assess-table .collapse .result-assessment{
+.assess-table .collapsible .result-assessment{
   text-align: center;
   text-indent: 4em;
 }

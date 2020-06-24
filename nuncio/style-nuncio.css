@@ -164,3 +164,415 @@ html, body {
   line-height: 100%;
   margin: auto;
 }
+
+.modal-window {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 967px;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+    justify-content: center;
+
+    transition: visibility 0.2s;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  width: 800px;
+  height: auto;
+
+  bottom: 0px;
+
+  opacity: 1;
+  
+  background: #DCDCDC;
+  border-radius: 3px;
+
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.modal_inactive {
+  opacity: 0;
+  bottom: 50px;
+  z-index: -1;
+}
+
+.modal_header {
+  width: 100%;
+  flex: 2;
+  background: #67647E;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.close_modal_btn:hover {
+  cursor: pointer;
+}
+
+.close_modal_btn > img {
+  width: 27px;
+  height: 27px;
+}
+
+.modal_padding {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.modal_component_form {
+  width: 100%;
+  flex: 17;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.modal_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  position: relative;
+}
+
+.component_primary_information_row {
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+
+  width: 100%;
+  height: 83px;
+
+  margin-bottom: 15px;
+
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.component_primary_information_row > .input_wrapper > input {
+  background: transparent;
+}
+
+.component_primary_information_row > :last-child {
+  flex: 2;
+}
+
+.component_primary_information_row > :first-child {
+  flex: 8;
+  margin-right: 20px;
+}
+
+.component_primary_information_row > :first-child > .placeholder {
+  margin-left: -12px;
+}
+
+.component_primary_information_row > :last-child > .placeholder {
+  margin-left: -14px;
+  margin-top: -2px;
+}
+
+.component_primary_information_row > :last-child > .input_suffix:before {
+  margin-top: -3px;
+}
+
+
+
+
+.component_row {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  width: 100%;
+
+  margin-bottom: -4px;
+}
+
+.component_row *:first-child {
+  flex: 5;
+}
+
+.component_row *:not(:first-child):not(btn) {
+  flex: 2;
+}
+
+
+.component_row * {
+  background: transparent;
+}
+
+.component_row *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.input_component.percentage:focus ~ .input_suffix:before,
+.input_component.percentage:valid ~ .input_suffix:before {
+  color: black;
+}
+
+.primary:focus ~ .placeholder,
+.primary:valid ~ .placeholder {
+  top: -75%;
+}
+
+.input_wrapper {
+  position: relative;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.input_suffix.percentage {
+  position: absolute;
+  left: 80%;
+  bottom: 88%;
+}
+.input_suffix.percentage:before {
+  content: '%';
+  position: absolute;
+  color: transparent;
+
+  transition: color 0.2s;
+}
+
+.input_component {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #67647E;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+}
+
+.form_row_container {
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  padding-top: 5px;
+
+}
+
+.input_component.name {
+  padding-left: 17px;
+}
+.input_component:not(.name) {
+  text-align: center;
+}
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield; 
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input_component.letter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align-last:center;
+}
+
+.input_component.letter >:first-child {
+  display: none;
+} 
+
+.placeholder {
+  position: relative;
+  z-index: 1;
+  top: -50%;
+  pointer-events: none;
+  font-size: 0.85em;
+
+  background: #DCDCDC;
+
+  transition: 0.2s;
+  display: inline-block;
+
+  padding-left: 3px;
+  padding-right: 3px;
+
+  text-align: center;
+}
+
+.placeholder.name {
+  left: 5%;
+}
+
+.placeholder:not(.name):not(.numerical_result) {
+  left: 17%;
+}
+
+.placeholder.numerical_result {
+  left: 5%;
+  font-size: 0.75em;
+}
+
+.input_component:focus ~ .placeholder,
+.input_component:not(:focus):valid ~ .placeholder
+ {
+  font-size: 0.75em;
+}
+
+.input_component:invalid {
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+
+.input_component:focus:not(.primary) ~ .placeholder,
+.input_component:not(:focus):not(.primary):valid ~ .placeholder {
+  top: -80%;
+}
+
+
+.input_component:not(.numerical_result):not(.name):not(.primary):focus ~ .placeholder,
+.input_component:not(.numerical_result):not(.name):not(.primary):not(:focus):valid ~ .placeholder
+ {
+  left: 12%;
+}
+
+.input_component.numerical_result:focus ~ .placeholder,
+.input_component.numerical_result:not(:focus):valid ~ .placeholder {
+  left: 5%;
+}
+
+.add_component_btn {
+  margin-top: 35px;
+  background: rgba(102, 99, 125, 0.9);
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 350px;
+  height: 75px;
+
+  color: white;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.7em;
+}
+
+.add_component_btn:hover {
+  cursor: pointer;
+}
+.input_suffix.percentage:before {
+  margin-top: 5px;
+}
+
+.minor_assessment_btn {
+  display: flex;
+  justify-content: center;
+  border: 3px dashed #B3B3B3;
+  border-radius: 21px;
+  padding: 15px 0px 15px 0px;
+  color: #797979;
+  font-family: "IBM Plex Sans";
+  align-items: center;
+}
+
+.minor_assessment_btn:hover {
+  cursor: pointer;
+}
+
+.plus-btn {
+  margin-right: 15px;
+}
+
+
+.close_row_img {
+  margin-top: 15px;
+}
+
+.component_row:not(:first-of-type):hover > .close_row_btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.component_row {
+  padding-right: 10px;
+}
+
+.close_row_btn {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s;
+}
+
+btn:hover {
+  cursor: pointer;
+}
+
+.error_text {
+  position: absolute;
+  left: 10px; 
+  color: #E06666;
+  font-weight: bold;
+}
+
+.error_text.minor {
+  font-size: 0.9em;
+  top: 75%;
+}
+
+.component_row {
+  padding-bottom: 30px;
+}
+
+.input_autocomplete {
+  position: absolute;
+  border-style: none;
+  width: calc(100% - 10px);
+  bottom: 28.5%;
+  height: 50px;
+  z-index: 0;
+  text-align: center;
+  left: 8.3%;
+}
+
+.input_component.numerical_result {
+  z-index: 1;
+  position: relative;
+}
+
+.error_text.major {
+  top: 60%;
+  font-size: 0.8em;
+}
+
+.input_component.letter {
+  font-size: 0.85em;
+}
+
+.input_wrapper.name {
+  min-height: 70.4px;
+}

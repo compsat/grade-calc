@@ -70,9 +70,9 @@ html, body {
 .course-assessment-name{
   text-align: left;
 }
-
+/*
 #checkbox {
-  display: none;
+  #display: none;
 }
 
 .toggle-triangle {
@@ -83,6 +83,27 @@ html, body {
 #checkbox:checked + .toggle-triangle {
   transform: rotate(90deg);
 }
+
+
+input[type=checkbox] {
+    display: block;
+    width: 30px;
+    -webkit-appearance: none;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+input[type=checkbox]:not(:checked) {
+    background-image: url(nuncio-triangleright.svg);
+}
+
+input[type=checkbox]:checked {
+    background-image: url("nuncio-triangledown.svg");
+}
+*/
 
 .hover-cell{
   display: flex;

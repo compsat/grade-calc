@@ -71,17 +71,14 @@ html, body {
   text-align: left;
 }
 
-#checkbox {
-  display: none;
+.triangle{
+  transform: rotate(0deg);
+  transition: transform 0.3s linear;
 }
 
-.toggle-triangle {
-  transition: all 0.75s 0.25s;
-  transform: rotate(0);
-}
-
-#checkbox:checked + .toggle-triangle {
+.triangle.open{
   transform: rotate(90deg);
+  transition: transform 0.3s linear;
 }
 
 

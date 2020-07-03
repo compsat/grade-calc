@@ -42,7 +42,7 @@ body {
 	border: solid 2px yellow;
 } 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
 	.grid-container {
 		grid-template-columns: minmax(5%, 10%) repeat(6, minmax(150px, 1fr)) minmax(5%, 10%);
 		grid-template-rows: repeat(22, 113px);

@@ -1,0 +1,70 @@
+/* Done so that layout occupies the whole height of page */
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+
+.grid-container {
+	height: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(6, minmax(30px, 1fr));
+	grid-template-rows: repeat(10, 90px) minmax(min-content, max-content) 250px;
+}
+
+
+.grid-center-item {
+	grid-column: 1 / span 6;
+}
+
+.index-header {
+	grid-row: 1 / span 6;
+	border: solid 2px red;
+}
+
+.assessment-panel {
+	grid-row: 5 / span 5;
+	border: solid 2px green;
+}
+
+
+.site-card-container {
+	grid-row: 10 / span 10;
+	border: solid 2px blue;
+}
+
+.index-footer {
+	grid-row: 11 / span 11;
+	border: solid 2px yellow;
+} 
+
+@media screen and (min-width: 1000px) {
+	.grid-container {
+		grid-template-columns: minmax(5%, 10%) repeat(6, minmax(150px, 1fr)) minmax(5%, 10%);
+		grid-template-rows: repeat(22, 113px);
+	}
+
+	.grid-center-item {
+		grid-column: 2 / span 6;
+	}
+
+	.index-header {
+		grid-row: 1 / span 4;
+	}
+
+	.assessment-panel {
+		grid-row: 3 / span 6;
+	}
+
+	.site-card-container {
+		grid-row: 9 / span 3;
+	}
+
+	.index-footer {
+		grid-row: 12 / span 3;
+	}
+}

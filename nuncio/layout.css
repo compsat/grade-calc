@@ -13,7 +13,7 @@ body {
 
 	display: grid;
 	grid-template-columns: repeat(6, minmax(30px, 1fr));
-	grid-template-rows: repeat(10, 90px) minmax(min-content, max-content) 250px;
+	grid-template-rows: repeat(10, 110px) minmax(min-content, max-content) 250px;
 }
 
 

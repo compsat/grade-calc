@@ -13,9 +13,13 @@ body {
 
 	display: grid;
 	grid-template-columns: repeat(6, minmax(30px, 1fr));
-	grid-template-rows: repeat(10, 120px) minmax(min-content, max-content) 250px;
+	grid-template-rows: repeat(12, 120px) minmax(min-content, max-content) 250px;
+
 }
 
+.grid-container > * {
+	padding: 15px 30px 0px 30px;
+}
 
 .grid-center-item {
 	grid-column: 1 / span 6;
@@ -23,7 +27,6 @@ body {
 
 .index-header {
 	grid-row: 1 / span 6;
-	padding: 15px 30px 0px 30px;
 }
 
 .assessment-panel {
@@ -59,28 +62,31 @@ body {
   height: 31px;
 }
 
-.header-label-container {
+.index-header {
   align-items: center;
-  font-weight: bold;
-  margin-bottom: 30px;
 }
 
-.header-label {
+.section-label {
 	font-weight: bold;
+	margin-bottom: 30px;
 }
 
-.text-content::before {
+.section-content::before {
 	display: block;
 	font-weight: bold;
-	font-size: 1.5em;
+	font-size: 1.35em;
 }
 
 .header-graphic {
 	width: 475px;
 }
 
-.header-content-container > .text-content::before {
+.section-content.header::before {
 	content: "Grade Calculator";
+}
+
+.section-content.footer::before {
+	content: "About Grade Calculator";
 }
 
 .header-content-container {
@@ -89,6 +95,40 @@ body {
 	align-items: center;
 }
 
+
+.footer-content-container {
+	margin-bottom: 50px;
+}
+.minor-content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-content.guides::before {
+  content: "Guides";
+}
+
+.section-content.more-guides::before {
+  content: "More Guides";
+}
+
+ul.section-content {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.minor-content-container > :first-child {
+  margin-right: 50%;
+}
+
+.soc-med-row > img {
+	width: 30px;
+}
+
+.footer-info {
+	display: flex;
+	justify-content: space-between;
+}
 
 @media screen and (min-width: 768px) {
 	.grid-container {

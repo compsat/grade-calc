@@ -155,4 +155,17 @@ ul.section-content {
 	.index-footer {
 		grid-row: 12 / span 3;
 	}
+
+	.header-content-container {
+		flex-direction: row;
+
+		/* Default value */
+		align-items: stretch;
+	}
+
+	.header-graphic {
+		height: 300px;
+		width: 300px;
+		margin-top: -35px;
+	}
 }

@@ -13,7 +13,7 @@ body {
 
 	display: grid;
 	grid-template-columns: repeat(6, minmax(30px, 1fr));
-	grid-template-rows: repeat(10, 110px) minmax(min-content, max-content) 250px;
+	grid-template-rows: repeat(10, 120px) minmax(min-content, max-content) 250px;
 }
 
 
@@ -23,11 +23,11 @@ body {
 
 .index-header {
 	grid-row: 1 / span 6;
-	border: solid 2px red;
+	padding: 15px 30px 0px 30px;
 }
 
 .assessment-panel {
-	grid-row: 5 / span 5;
+	grid-row: 6 / span 5;
 	border: solid 2px green;
 }
 
@@ -41,6 +41,54 @@ body {
 	grid-row: 11 / span 11;
 	border: solid 2px yellow;
 } 
+
+.index-header, .index-footer {
+	background: #8ECDCB;
+}
+
+.header-label-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-label-container::before {
+  content: '';
+  display: block;
+  background: url("comsat-icon.svg");
+  width: 31px;
+  height: 31px;
+}
+
+.header-label-container {
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.header-label {
+	font-weight: bold;
+}
+
+.text-content::before {
+	display: block;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.header-graphic {
+	width: 475px;
+}
+
+.header-content-container > .text-content::before {
+	content: "Grade Calculator";
+}
+
+.header-content-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 
 @media screen and (min-width: 768px) {
 	.grid-container {

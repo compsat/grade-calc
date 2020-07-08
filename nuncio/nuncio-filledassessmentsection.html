@@ -42,8 +42,8 @@
         <tr>
           <td class="course-assessment-name">
             <a data-toggle="collapse" href="#MinorAssessments1" role="button" aria-expanded="false" aria-controls="MinorAssessments1">
-            <span id = "toggle-triangle">
-              <img id="the-triangle" class="triangle" src="nuncio-triangleright.svg"></img>
+            <span class = "toggle-triangle">
+              <img class="the-triangle triangle" src="nuncio-triangleright.svg"></img>
            </span></a> Quizzes</td>
           <td>15%</td>
           <td>
@@ -72,8 +72,8 @@
         <tr>
           <td class="course-assessment-name">
             <a data-toggle="collapse" href="#MinorAssessments2" role="button" aria-expanded="false" aria-controls="MinorAssessments2">
-            <span id = "toggle-triangle">
-              <img id="the-triangle" class="triangle" src="nuncio-triangleright.svg"></img>
+            <span class = "toggle-triangle">
+              <img class="the-triangle triangle" src="nuncio-triangleright.svg"></img>
            </span></a> Quizzes</td>
            <td>15%</td>
           <td>
@@ -101,8 +101,8 @@
         </tr>
         <tr>
           <td class="course-assessment-name"><a data-toggle="collapse" href="#MinorAssessments3" role="button" aria-expanded="false" aria-controls="MinorAssessments3">
-            <span id = "toggle-triangle">
-            <img id="the-triangle" class="triangle" src="nuncio-triangleright.svg"></img>
+            <span class = "toggle-triangle">
+            <img class=the-triangle triangle" src="nuncio-triangleright.svg"></img>
          </span></a> Quizzes</td>
           <td>15%</td>
           <td>
@@ -130,8 +130,8 @@
         </tr>
         <tr>
           <td class="course-assessment-name"><a data-toggle="collapse" href="#MinorAssessments4" role="button" aria-expanded="false" aria-controls="MinorAssessments4">
-            <span id = "toggle-triangle">
-              <img id="the-triangle" class="triangle" src="nuncio-triangleright.svg"></img>
+            <span class = "toggle-triangle">
+              <img class="the-triangle triangle" src="nuncio-triangleright.svg"></img>
            </span></a> Quizzes</td>
            <td>15%</td>
           <td>
@@ -159,8 +159,8 @@
         </tr>
         <tr>
           <td class="course-assessment-name"><a data-toggle="collapse" href="#MinorAssessments5" role="button" aria-expanded="false" aria-controls="MinorAssessments5">
-            <span id = "toggle-triangle">
-              <img id="the-triangle" class="triangle" src="nuncio-triangleright.svg"></img>
+            <span class = "toggle-triangle">
+              <img class="the-triangle triangle" src="nuncio-triangleright.svg"></img>
            </span></a> Quizzes</td>
           <td>15%</td>
           <td>
@@ -188,8 +188,8 @@
         </tr>
         <tr>
           <td class="course-assessment-name"><a data-toggle="collapse" href="#MinorAssessments6" role="button" aria-expanded="false" aria-controls="MinorAssessments6">
-            <span id = "toggle-triangle">
-              <img id="the-triangle" class="triangle" src="nuncio-triangleright.svg"></img>
+            <span class = "toggle-triangle">
+              <img class="the-triangle triangle" src="nuncio-triangleright.svg"></img>
            </span></a> Quizzes</td>
           <td>15%</td>
           <td>
@@ -225,17 +225,21 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script>
   (function(document){
-    var div = document.getElementById('toggle-triangle');
-    var icon = document.getElementById('the-triangle');
-    var open = false;
-    div.addEventListener('click', function(){
-      if(open){
-        icon.className = 'triangle';
-      } else{
-        icon.className = 'triangle open';
-      }
-      open = !open;
-    });
+    let divs = document.getElementsByClassName('toggle-triangle');
+    let icons = document.getElementsByClassName('the-triangle');
+    for(var i = 0; i < divs.length; i++) {
+      let div = divs[i];
+      let icon = icons[i];
+      let open = false;
+      div.addEventListener('click', function(){
+        if(open){
+          icon.className = 'the-triangle triangle';
+        } else{
+          icon.className = 'the-triangle triangle open';
+        }
+        open = !open;
+      });
+    }
   })(document);
 </script>
 </body>

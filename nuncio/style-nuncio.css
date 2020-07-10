@@ -10,12 +10,85 @@ html, body {
 }
 
 .main-form{
-  width: 967px;
-  height: 669px;
-
+  width: 882.7px;
+  height: 655.2px;
+  padding-top: 13.8px;
+  padding-left: 42.3px;
+  padding-right: 42px;
   background: #FAFAFA;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+  overflow: auto;
+}
+
+/* the table*/
+.assess-table table{
+  width: 100%;
+  text-align: center;
+}
+
+.assess-table th{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 150%;
+  color: #262424;
+
+  height: 42px;
+}
+
+.assess-table tr{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #262424;
+}
+
+.assess-table td{
+  height: 42px;
+}
+
+.assess-table .collapsible td{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  color: #797979;
+  text-indent: 1.5em;
+  height: 30px;
+}
+
+.assess-table .collapsible .result-assessment{
+  text-align: center;
+  text-indent: 4em;
+}
+
+.course-assessment-name{
+  text-align: left;
+}
+
+.triangle{
+  transform: rotate(0deg);
+  transition: transform 0.1s linear;
+}
+
+.triangle.open{
+  transform: rotate(90deg);
+  transition: transform 0.1s linear;
+}
+
+
+.hover-cell{
+  display: flex;
+  float: right;
+}
+
+.result-assessment{
+  text-align: right;
 }
 
 /*icons*/
@@ -33,7 +106,7 @@ html, body {
   background-color: #FAFAFA;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
 }
 
@@ -41,11 +114,22 @@ html, body {
   position: inherit;
   width: 33.39px;
   height: 33.39px;
-  left: 181.64px;
-  top: 341.83px;
   display: flex;
   border-radius: 4px;
   margin: auto;
+}
+
+.assess-table a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+#fillicon-container{
+  margin-left: 0;
+}
+
+.right-icon .square{
+  margin-right: 0;
 }
 
 .square{
@@ -59,6 +143,29 @@ html, body {
   border-radius: 3.62799px;
   margin: 15px;
 }
+
+.hover-icon{
+  display: flex;
+  opacity:0;
+}
+
+.assess-table tr:hover .hover-icon{
+  opacity: 1;
+}
+
+.tiny-square{
+  width: 17.54px;
+  height: 18.51px;
+  background: #663C67;
+  border-radius: 4px;
+
+  position: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4.87px;
+}
+
 /*center add new document*/
 .add-doc{
   display: block;

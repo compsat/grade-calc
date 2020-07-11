@@ -272,6 +272,58 @@ html, body {
   margin: auto;
 }
 
+/*grade boundaries modal*/
+.grade-boundary{
+
+}
+
+.letter-block{
+  width: 246.18px;
+  height: 96px;
+  background: #DCDCDC;
+}
+
+.letter h1{
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 52px;
+  text-align: center;
+  color: #262424;
+}
+
+.modifygradeB{
+  display: block;
+}
+
+.gradeRange{
+  width: 55.32px;
+  height: 35.96px;
+  background: #E4DFDF;
+}
+
+.gradeRange p{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26.1966px;
+  line-height: 150%;
+  text-align: center;
+  color: #797979;
+}
+
+.gradeLine{
+  width: 99.58px;
+  height: 0px;
+  border: 1.38305px solid #E4DFDF;
+}
+
+.gradeBicons{
+  width: 16.6px;
+  height: 35.96px;
+}
+
 .modal-window {
     visibility: hidden;
     display: flex;
@@ -296,7 +348,7 @@ html, body {
   bottom: 0px;
 
   opacity: 1;
-  
+
   background: #DCDCDC;
   border-radius: 3px;
 
@@ -491,7 +543,7 @@ html, body {
 
 input[type="number"] {
   -moz-appearance: textfield;
-  -webkit-appearance: textfield; 
+  -webkit-appearance: textfield;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -509,7 +561,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .input_component.letter >:first-child {
   display: none;
-} 
+}
 
 .placeholder {
   position: relative;
@@ -641,7 +693,7 @@ btn:hover {
 
 .error_text {
   position: absolute;
-  left: 10px; 
+  left: 10px;
   color: #E06666;
   font-weight: bold;
 }

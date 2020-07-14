@@ -280,7 +280,9 @@ html, body {
 .letter-block{
   width: 246.18px;
   height: 96px;
-  background: #DCDCDC;
+  background: #F6F6F6;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .letter h1{
@@ -290,17 +292,21 @@ html, body {
   font-size: 44px;
   line-height: 52px;
   text-align: center;
-  color: #262424;
+  color: #797979;
+  margin:0;
 }
 
 .modifygradeB{
-  display: block;
+  width: inherit;
+  height: 40px;
+  display: flex;
 }
 
 .gradeRange{
   width: 55.32px;
   height: 35.96px;
   background: #E4DFDF;
+  margin:0;
 }
 
 .gradeRange p{
@@ -311,17 +317,27 @@ html, body {
   line-height: 150%;
   text-align: center;
   color: #797979;
+  margin: 0;
 }
 
 .gradeLine{
-  width: 99.58px;
+  width: 96.82px;
   height: 0px;
   border: 1.38305px solid #E4DFDF;
+  margin: 18.22px 0;
 }
 
 .gradeBicons{
   width: 16.6px;
   height: 35.96px;
+  display: block;
+  margin: 0 2.77px;
+}
+
+.gradeBicons img{
+  margin-bottom: 2.77px;
+  width: 16.6px;
+  height: 16.6px;
 }
 
 .modal-window {

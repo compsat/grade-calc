@@ -143,8 +143,15 @@ ul.section-content {
 }
 
 .microsite-card {
-	width: 430px;
+    min-width: 430px;
+    max-width: 430px;
 }
+
+
+@media screen and (min-width: 852px) {
+  
+}
+
 
 .microsite-card-graphic-container {
     display: flex;
@@ -202,11 +209,20 @@ ul.section-content {
 	}
 
 	.site-card-container {
-		grid-row: 9 / span 3;
+		grid-row: 9 / span 4;
+		display: flex;
+		flex-direction: row;
+		overflow-y: hidden;
+		overflow-x: auto;
+	}
+
+
+	.site-card-container > * {
+		margin-right: 41px;
 	}
 
 	.index-footer {
-		grid-row: 14 / span 4;
+		grid-row: 15 / span 4;
 		position: relative;
 	}
 

@@ -222,6 +222,7 @@ ul.section-content {
 		flex-direction: row;
 		overflow-y: hidden;
 		overflow-x: auto;
+		margin-bottom: 50px;
 	}
 
 

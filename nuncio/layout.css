@@ -204,7 +204,7 @@ use that class */
     bottom: 161px;
     left: 77%;
     z-index: 2;
-	background: #FFFF;
+	background: rgba(255, 255, 255, 1);
 	transition: box-shadow 0.3s ease;
 }
 

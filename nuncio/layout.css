@@ -17,7 +17,7 @@ body {
 
 	display: grid;
 	grid-template-columns: repeat(6, minmax(30px, 1fr));
-	grid-template-rows: repeat(12, 120px) minmax(min-content, max-content) 250px;
+	grid-template-rows: repeat(12, 120px) minmax(min-content, max-content) minmax(min-content, max-content);
 
 }
 
@@ -40,12 +40,20 @@ body {
 
 
 .site-card-container {
-	grid-row: 10 / span 10;
+	grid-row: 13 / span 1;
 	border: solid 2px blue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.site-card-container > * {
+    margin-bottom: 50px;
 }
 
 .index-footer {
-	grid-row: 11 / span 11;
+	grid-row: 14 / span 11;
 	border: solid 2px yellow;
 } 
 
@@ -219,6 +227,7 @@ ul.section-content {
 
 	.site-card-container > * {
 		margin-right: 41px;
+		margin-bottom: 0px;
 	}
 
 	.index-footer {

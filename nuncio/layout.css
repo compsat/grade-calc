@@ -154,6 +154,7 @@ ul.section-content {
     max-width: 430px;
     position: relative;
     border-radius: 15px;
+    transition: box-shadow 0.3s ease;
 }
 
 .microsite-card:hover  {
@@ -165,9 +166,13 @@ ul.section-content {
 of the class 'simplebar-content. If you want to change the CSS regarding the scrollable div,
 use that class */
 .simplebar-content > * {
+	margin-bottom: 50px;
+}
+
+.simplebar-content {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 50px;
+	align-items: center;
 }
 
 .microsite-card-graphic-container {

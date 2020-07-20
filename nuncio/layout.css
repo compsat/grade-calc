@@ -41,7 +41,6 @@ body {
 
 .site-card-container {
 	grid-row: 13 / span 1;
-	border: solid 2px blue;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -154,6 +153,18 @@ ul.section-content {
     min-width: 430px;
     max-width: 430px;
     position: relative;
+    border-radius: 15px;
+}
+
+.microsite-card:hover  {
+  	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.55);
+  	transition: box-shadow 0.3s ease;
+}
+
+
+.simplebar-content > * {
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -166,12 +177,23 @@ ul.section-content {
     border-top-left-radius: 15px;
 }
 
+.simplebar-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.simplebar-content > * {
+	margin-bottom: 50px;
+}
+
 .microsite-card-text {
     background: #FFFFFF;
     padding: 9px 19px 25px 19px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
 }
 
 
@@ -184,6 +206,13 @@ ul.section-content {
     left: 77%;
     z-index: 2;
 	background: #FFFF;
+	transition: box-shadow 0.3s ease;
+}
+
+.redirect-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.55);
+  transition: box-shadow 0.3s ease;
 }
 
 
@@ -191,7 +220,7 @@ ul.section-content {
 @media screen and (min-width: 852px) {
 	.grid-container {
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(14, 113px);
+ 		grid-template-rows: repeat(8, 113px) minmax(min-content, max-content) minmax(min-content, max-content);
 		padding: 40px 125px 50px 125px;
 	}
 
@@ -210,7 +239,7 @@ ul.section-content {
 	}
 
 	.site-card-container {
-		grid-row: 9 / span 4;
+		grid-row: 9 / span 1;
 		display: flex;
 		flex-direction: row;
 		overflow-y: hidden;
@@ -218,6 +247,17 @@ ul.section-content {
 		margin-bottom: 50px;
 	}
 
+	.simplebar-content {
+	  grid-row: 9 / span 4;
+	  display: flex;
+	  flex-direction: row;
+	  margin-bottom: 50px;
+	  margin-bottom: 20px;
+	}
+
+	.simplebar-content > * {
+		margin-right: 50px;
+	}
 
 	.site-card-container > * {
 		margin-right: 41px;
@@ -225,8 +265,9 @@ ul.section-content {
 	}
 
 	.index-footer {
-		grid-row: 14 / span 4;
-		position: relative;
+		grid-row: 10/ span 1;
+    	margin-top: 120px;
+    	position: relative;
 	}
 
 	.index-header,

@@ -153,33 +153,25 @@ ul.section-content {
 .microsite-card {
     min-width: 430px;
     max-width: 430px;
-}
-
-
-@media screen and (min-width: 852px) {
-  
+    position: relative;
 }
 
 
 .microsite-card-graphic-container {
     display: flex;
     justify-content: center;
-    position: relative;
     background: #8ECDCB;
     padding: 25px 19px 10px 19px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    z-index: -1;
 }
 
 .microsite-card-text {
-    position: relative;
     background: #FFFFFF;
     padding: 9px 19px 25px 19px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    z-index: -1;
 }
 
 
@@ -188,9 +180,10 @@ ul.section-content {
     padding: 12px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     position: absolute;
-    z-index: 5;
-    right: 60px;
-    top: -27px;
+    bottom: 161px;
+    left: 77%;
+    z-index: 2;
+	background: #FFFF;
 }
 
 

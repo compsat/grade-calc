@@ -128,27 +128,39 @@ html, body {
 }
 
 .hover-expand-button {
-  background: #663C67;
   display: flex;
   flex-direction: row;
-  max-width: 1000px;
+
+  background: #663C67;
 }
 
-.hover-expand-button:hover {
-  transition: max-width 0.2s ease;
-}
+/*
+    After pseudo element is used to add the text shown when hovering over the assessment buttons 
 
+    In order to let the button grow smoothly via 'transition', the max-width trick was used 
+    This involved changing the max-width of the pseudo element between hover states. When applying
+    transition on this attribute, the pseudo element will 'grow' according to the animation, while
+    the parent div (the button) will also grow smoothly due to its width and height being auto.
+
+    To know more about this trick, see this link: https://stackoverflow.com/questions/38643529/css-transition-auto-width
+    opacity and margin-right were used to add spacing between the text and the button and 
+    allow for the fade-in / fade-out of the text respectively 
+*/
 .hover-expand-button::after {
   display: flex;
   justify-content: center;
   align-items: center;
+
+ 
   position: relative;
-  font-size: 1.3em;
+  left: 9.5%; 
+
   color: white;
+  font-size: 1.3em;
   font-weight: bold;
-  left: 9.5%;
-  opacity: 0;
+ 
   max-width: 0;
+  opacity: 0;
   margin-right: 0px;
   transition: max-width 0.4s ease, opacity 0.15s ease, margin-right 0.5s ease;
 }

@@ -311,6 +311,28 @@ html, body {
   top: 34px;
 }
 
+.btn-reset{
+  position: absolute;
+  width: 92px;
+  height: 37px;
+  left: 636px;
+  top: 119px;
+
+  background: #403E3E;
+  border-radius: 3.02646px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #F6F6F6;
+}
+
+.btn-reset img{
+  height: 19px;
+}
+
 .letter-block-container{
   display: flex;
   height: 575px;

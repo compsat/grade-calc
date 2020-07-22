@@ -311,6 +311,15 @@ html, body {
   top: 34px;
 }
 
+.letter-block-container{
+  display: flex;
+  height: 575px;
+  width: 630px;
+  justify-content: space-between;
+  margin: auto;
+  flex-flow: row wrap;
+}
+
 .letter-block{
   width: 246.18px;
   height: 96px;

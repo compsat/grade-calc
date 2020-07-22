@@ -318,6 +318,8 @@ html, body {
   justify-content: space-between;
   margin: auto;
   flex-flow: row wrap;
+  position: relative;
+  top: 79px;
 }
 
 .letter-block{
@@ -379,6 +381,24 @@ html, body {
   margin-bottom: 2.77px;
   width: 16.6px;
   height: 16.6px;
+}
+
+.btn-bigmodal{
+  position: absolute;
+  width: 528px;
+  height: 94px;
+  left: 127px;
+  top: 811px;
+
+  background: #403E3E;
+  border-radius: 4px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32.2824px;
+  line-height: 150%;
+  text-align: center;
+  color: #F6F6F6;
 }
 
 .modal-window {

@@ -273,16 +273,47 @@ html, body {
 }
 
 /*grade boundaries modal*/
-.grade-boundary{
+.grade-boundary-modal{
+  background: #F6F6F6;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 782px;
+  height: 959px;
+}
 
+.grade-boundary-header{
+  width: 782px;
+  height: 98px;
+  left: 0px;
+  top: 0px;
+  background: #403E3E;
+}
+
+.grade-boundary-header h1{
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36.2105px;
+  line-height: 43px;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  margin: 0;
+}
+
+.grade-boundary-header img{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 702px;
+  top: 34px;
 }
 
 .letter-block{
   width: 246.18px;
   height: 96px;
-  background: #F6F6F6;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 
 .letter h1{

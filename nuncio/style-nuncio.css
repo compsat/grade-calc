@@ -272,6 +272,184 @@ html, body {
   margin: auto;
 }
 
+/*grade boundaries modal*/
+.grade-boundary-modal{
+  background: #F6F6F6;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 782px;
+  height: 959px;
+}
+
+.grade-boundary-header{
+  width: 782px;
+  height: 98px;
+  left: 0px;
+  top: 0px;
+  background: #403E3E;
+}
+
+.grade-boundary-header h1{
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36.2105px;
+  line-height: 43px;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  margin: 0;
+}
+
+.grade-boundary-header img{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 702px;
+  top: 34px;
+}
+
+.btn-reset{
+  position: absolute;
+  width: 92px;
+  height: 37px;
+  left: 636px;
+  top: 119px;
+
+  background: #403E3E;
+  border-radius: 3.02646px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 37px;
+  text-align: center;
+  color: #F6F6F6;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn-reset p{
+  margin: 0;
+  padding: 0;
+}
+
+.btn-reset img{
+  height: 19px;
+}
+
+.letter-block-container{
+  display: flex;
+  height: 575px;
+  width: 630px;
+  justify-content: space-between;
+  margin: auto;
+  flex-flow: row wrap;
+  position: relative;
+  top: 79px;
+}
+
+.letter-block{
+  width: 246.18px;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter h1{
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 52px;
+  text-align: center;
+  color: #797979;
+  margin:0;
+}
+
+.modifygradeB{
+  width: inherit;
+  height: 40px;
+  display: flex;
+}
+
+.gradeRange{
+  width: 55.32px;
+  height: 35.96px;
+  background: #E4DFDF;
+  margin:0;
+}
+
+.gradeRange p{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26.1966px;
+  line-height: 150%;
+  text-align: center;
+  color: #797979;
+  margin: 0;
+}
+
+.gradeLine{
+  width: 96.82px;
+  height: 0px;
+  border: 1.38305px solid #E4DFDF;
+  background-color: #E4DFDF;
+  margin: 16.6px 0;
+}
+
+.gradeBicons{
+  width: 16.6px;
+  height: 35.96px;
+  display: block;
+  margin: 0 2.77px;
+}
+
+.gradeBicons img{
+  margin-bottom: 2.77px;
+  width: 16.6px;
+  height: 16.6px;
+}
+
+.range-error{
+  border-bottom: 3px solid #E06666;
+}
+
+.invalid-range{
+  margin: 0;
+  font-family: IBM Plex Sans;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 175%;
+  color: #E06666;
+  transform: rotate(-0.4deg);
+}
+
+.btn-bigmodal{
+  position: absolute;
+  width: 528px;
+  height: 94px;
+  left: 127px;
+  top: 811px;
+
+  background: #403E3E;
+  border-radius: 4px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32.2824px;
+  line-height: 150%;
+  text-align: center;
+  color: #F6F6F6;
+}
+
 .modal-window {
     visibility: hidden;
     display: flex;
@@ -296,7 +474,7 @@ html, body {
   bottom: 0px;
 
   opacity: 1;
-  
+
   background: #DCDCDC;
   border-radius: 3px;
 
@@ -491,7 +669,7 @@ html, body {
 
 input[type="number"] {
   -moz-appearance: textfield;
-  -webkit-appearance: textfield; 
+  -webkit-appearance: textfield;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -509,7 +687,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .input_component.letter >:first-child {
   display: none;
-} 
+}
 
 .placeholder {
   position: relative;
@@ -641,7 +819,7 @@ btn:hover {
 
 .error_text {
   position: absolute;
-  left: 10px; 
+  left: 10px;
   color: #E06666;
   font-weight: bold;
 }

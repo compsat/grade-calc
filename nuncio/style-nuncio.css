@@ -324,9 +324,18 @@ html, body {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 37px;
   text-align: center;
   color: #F6F6F6;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn-reset p{
+  margin: 0;
+  padding: 0;
 }
 
 .btn-reset img{
@@ -347,6 +356,9 @@ html, body {
 .letter-block{
   width: 246.18px;
   height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .letter h1{
@@ -403,6 +415,21 @@ html, body {
   margin-bottom: 2.77px;
   width: 16.6px;
   height: 16.6px;
+}
+
+.range-error{
+  border-bottom: 3px solid #E06666;
+}
+
+.invalid-range{
+  margin: 0;
+  font-family: IBM Plex Sans;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 175%;
+  color: #E06666;
+  transform: rotate(-0.4deg);
 }
 
 .btn-bigmodal{

@@ -9,7 +9,10 @@
       <h1>Grade Boundaries</h1>
       <img src = "nuncio-cancelgradeBmodal.svg"></img>
     </div>
-    <button type="button" class="btn-reset"><img src="nuncio-reseticon.svg">RESET</button>
+    <button type="button" class="btn-reset">
+      <img src="nuncio-reseticon.svg"></img>
+      <p>RESET</p>
+    </button>
     <div class = "letter-block-container">
       <div class = "letter-block">
         <div class="letter">
@@ -158,12 +161,12 @@
             <img src = "nuncio-incrementgradeB.svg"></img>
             <img src = "nuncio-decrementgradeB.svg"></img>
           </div>
-          <div class="gradeRange">
+          <div class="gradeRange range-error">
             <p>49</p>
           </div>
           <div class="gradeLine">
           </div>
-          <div class="gradeRange">
+          <div class="gradeRange range-error">
             <p>0</p>
           </div>
           <div class = "gradeBicons">
@@ -171,6 +174,7 @@
             <img src = "nuncio-decrementgradeB.svg"></img>
           </div>
         </div>
+        <p class="invalid-range">invalid range</p>
       </div>
     </div>
     <button type="button" class="btn-bigmodal">APPLY</button>

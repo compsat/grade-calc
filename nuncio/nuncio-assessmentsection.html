@@ -79,26 +79,25 @@
 			</form>
 		</div>
 
-			</div>
-			<div class="icon-container">
-				<div class="left-icon">
-					<div class="square" id="fillicon-container">
-						<img class="icon" src="nuncio-fillicon.svg"></img>
-					</div>
-					<div class="square" id="rangeicon-container">
-						<img class="icon" src="nuncio-rangeicon.svg"></img>
-					</div>
-					<div class="square" id="reseticon-container">
-						<img class="icon" src="nuncio-reseticon.svg"></img>
-					</div>
-				</div>
 
-				<div class="right-icon">
-					<div class="square" id="saveicon-container">
-						<img class="icon" src="nuncio-saveicon.svg"></img>
-					</div>
-				</div>
-			</div>
+
+			<section class="icon-row">
+				<btn id="fill" class="hover-expand-button">
+					<img src="nuncio-fillicon.svg" class="hover-expand-button-icon">
+				</btn>
+				<btn id="grade-ranges" class="hover-expand-button">
+					<img src="nuncio-rangeicon.svg" class="hover-expand-button-icon">
+				</btn>
+				<btn id="reset" class="hover-expand-button">
+					<img src="nuncio-reseticon.svg" class="hover-expand-button-icon">
+				</btn>
+
+				<!--Auto margins with flexbox were used to place the last button to the right of 
+			        row                                                                         -->
+				<btn id="add" class="hover-expand-button">
+					<img src="nuncio-addicon.svg" class="hover-expand-button-icon">
+				</btn>
+			</section>
 
 			<img class="add-doc" src="nuncio-addDocument.svg"></img>
 

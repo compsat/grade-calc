@@ -104,7 +104,7 @@ html, body {
 .left-icon{
   height: auto;
   background-color: #FAFAFA;
-
+  position:relative;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -119,6 +119,110 @@ html, body {
   margin: auto;
 }
 
+.icon-row {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 37px;
+  margin-top: 9px;
+}
+
+.hover-expand-button {
+  display: flex;
+  flex-direction: row;
+
+  background: #663C67;
+}
+
+/*
+    After pseudo element is used to add the text shown when hovering over the assessment buttons 
+
+    In order to let the button grow smoothly via 'transition', the max-width trick was used 
+    This involved changing the max-width of the pseudo element between hover states. When applying
+    transition on this attribute, the pseudo element will 'grow' according to the animation, while
+    the parent div (the button) will also grow smoothly due to its width and height being auto.
+
+    To know more about this trick, see this link: https://stackoverflow.com/questions/38643529/css-transition-auto-width
+    opacity and margin-right were used to add spacing between the text and the button and 
+    allow for the fade-in / fade-out of the text respectively 
+*/
+.hover-expand-button::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+  position: relative;
+  left: 9.5%; 
+
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+ 
+  max-width: 0;
+  opacity: 0;
+  margin-right: 0px;
+  transition: max-width 0.4s ease, opacity 0.15s ease, margin-right 0.5s ease;
+}
+
+.hover-expand-button:hover::after {
+  max-width: 100px;
+  opacity: 1;
+  margin-right: 10px;
+  transition: max-width 0.5s ease, opacity 0.5s ease, margin-right 0.1s ease;
+}
+
+#fill.hover-expand-button::after {
+  content: "FILL";
+}
+
+#grade-ranges.hover-expand-button::after {
+  content: "RANGE";
+}
+
+#reset.hover-expand-button::after {
+  content: "RESET";
+}
+
+#add.hover-expand-button::after {
+  content: "ADD";
+}
+
+
+
+.icon-row > :last-child {
+  margin-left: auto;
+}
+
+
+.icon-row > :nth-child(-n+2) {
+  margin-right: 22px;
+}
+
+.hover-expand-button-icon {
+  width: 31px;
+}
+
+.hover-expand-button {
+  border-radius: 4px;
+  padding: 7px;
+}
+
+#fill {
+  padding-left: 10px;
+  padding-right: 7px;
+}
+
+.hover-expand-button {
+  padding: 9px;
+}
+
+.hover-expand-button-icon {
+  width: 28px;
+}
+
+
+
 .assess-table a:hover {
   color: inherit;
   text-decoration: none;
@@ -128,20 +232,8 @@ html, body {
   margin-left: 0;
 }
 
-.right-icon .square{
-  margin-right: 0;
-}
-
-.square{
-  position: inherit;
-  width: 55.8px;
-  height: 55.8px;
-  left: 170.3px;
-  top: 333.2px;
-  display: flex;
-  background: #663C67;
-  border-radius: 3.62799px;
-  margin: 15px;
+.right-icon {
+  position: relative;
 }
 
 .hover-icon{

@@ -17,7 +17,7 @@ body {
 
 	display: grid;
 	grid-template-columns: repeat(6, minmax(30px, 1fr));
-	grid-template-rows: repeat(12, 120px) minmax(min-content, max-content) 250px;
+	grid-template-rows: repeat(12, 120px) minmax(min-content, max-content) minmax(min-content, max-content);
 
 }
 
@@ -40,12 +40,19 @@ body {
 
 
 .site-card-container {
-	grid-row: 10 / span 10;
-	border: solid 2px blue;
+	grid-row: 13 / span 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.site-card-container > * {
+    margin-bottom: 50px;
 }
 
 .index-footer {
-	grid-row: 11 / span 11;
+	grid-row: 14 / span 11;
 	border: solid 2px yellow;
 } 
 
@@ -142,11 +149,77 @@ ul.section-content {
 	display: none;
 }
 
+.microsite-card {
+    min-width: 430px;
+    max-width: 430px;
+    position: relative;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.microsite-card:hover  {
+  	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.55);
+  	transition: box-shadow 0.3s ease;
+}
+
+/* The simplebar JS library basically puts all the elements we use the library on in a div
+of the class 'simplebar-content. If you want to change the CSS regarding the scrollable div,
+use that class */
+.simplebar-content > * {
+	margin-bottom: 50px;
+}
+
+.simplebar-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.microsite-card-graphic-container {
+    display: flex;
+    justify-content: center;
+    background: #8ECDCB;
+    padding: 25px 19px 10px 19px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+
+
+.microsite-card-text {
+    background: #FFFFFF;
+    padding: 9px 19px 25px 19px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+
+.redirect-button {
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    bottom: 161px;
+    left: 77%;
+    z-index: 2;
+	background: rgba(255, 255, 255, 1);
+	transition: box-shadow 0.3s ease;
+}
+
+.redirect-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.55);
+  transition: box-shadow 0.3s ease;
+}
+
+
 /* Desktop rules */
 @media screen and (min-width: 852px) {
 	.grid-container {
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(14, 113px);
+ 		grid-template-rows: repeat(8, 113px) minmax(min-content, max-content) minmax(min-content, max-content);
 		padding: 40px 125px 50px 125px;
 	}
 
@@ -165,12 +238,35 @@ ul.section-content {
 	}
 
 	.site-card-container {
-		grid-row: 9 / span 3;
+		grid-row: 9 / span 1;
+		display: flex;
+		flex-direction: row;
+		overflow-y: hidden;
+		overflow-x: auto;
+		margin-bottom: 50px;
+	}
+
+	.simplebar-content {
+	  grid-row: 9 / span 4;
+	  display: flex;
+	  flex-direction: row;
+	  margin-bottom: 50px;
+	  margin-bottom: 20px;
+	}
+
+	.simplebar-content > * {
+		margin-right: 50px;
+	}
+
+	.site-card-container > * {
+		margin-right: 41px;
+		margin-bottom: 0px;
 	}
 
 	.index-footer {
-		grid-row: 14 / span 4;
-		position: relative;
+		grid-row: 10/ span 1;
+    	margin-top: 120px;
+    	position: relative;
 	}
 
 	.index-header,

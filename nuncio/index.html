@@ -6,6 +6,14 @@
 		<link rel="stylesheet" href="style-nuncio.css">
 		<link rel="stylesheet" href="layout.css">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- The two following links are for the use of the library simplebar: https://github.com/Grsmto/simplebar.
+			 This allows for Mac OSX-like scroll bars in the microsite section -->
+		<link
+		  rel="stylesheet"
+		  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 	</head>
 
 	<body>
@@ -24,8 +32,71 @@
 			<section class="assessment-panel grid-item-marker grid-center-item">
 			</section>
 
-			<section class="site-card-container grid-item-marker grid-center-item">
-				
+			<!-- Possible concern, the scrolling for this div doesn't go all the way. It just goes just
+			     enough for the last card to be seen, but its cuts off a little by the edge.
+
+			     The calling of data-simple bar invokes the simplebar library
+			     to convert the default scrollbars for this overflowing div
+
+																							   -->
+
+			<section data-simplebar class="site-card-container grid-item-marker grid-center-item">
+
+				<!-- If ever this site is hooked up to some sort of central back end for all microsite,
+					these cards should be auto generated. The container div is prepped for this scenario -->
+
+
+				<div class="microsite-card">
+					<div class="microsite-card-graphic-container">
+						<img src="microsite-card-graphic.svg">
+					</div>
+					<div class="microsite-card-text">
+						<a class="redirect-button">
+							<img src="microsite-redirect.svg">
+						</a>
+						<h4>Grade Calculator</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec nibh at augue convallis mollis a at ante. Fusce at sapien nec quam dignissim maximus vel id purus.</p>
+					</div>
+				</div>
+
+				<div class="microsite-card">
+					<div class="microsite-card-graphic-container">
+						<img src="microsite-card-graphic.svg">
+					</div>
+					<div class="microsite-card-text">
+						<a class="redirect-button">
+							<img src="microsite-redirect.svg">
+						</a>
+						<h4>Grade Calculator</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec nibh at augue convallis mollis a at ante. Fusce at sapien nec quam dignissim maximus vel id purus.</p>
+					</div>
+				</div>
+
+				<div class="microsite-card">
+					<div class="microsite-card-graphic-container">
+						<img src="microsite-card-graphic.svg">
+					</div>
+					<div class="microsite-card-text">
+						<a class="redirect-button">
+							<img src="microsite-redirect.svg">
+						</a>
+						<h4>Grade Calculator</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec nibh at augue convallis mollis a at ante. Fusce at sapien nec quam dignissim maximus vel id purus.</p>
+					</div>
+				</div>
+
+				<div class="microsite-card">
+					<div class="microsite-card-graphic-container">
+						<img src="microsite-card-graphic.svg">
+					</div>
+					<div class="microsite-card-text">
+						<a class="redirect-button">
+							<img src="microsite-redirect.svg">
+						</a>
+						<h4>Grade Calculator</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec nibh at augue convallis mollis a at ante. Fusce at sapien nec quam dignissim maximus vel id purus.</p>
+					</div>
+				</div>
 			</section>
 
 			<footer class="grid-item-marker grid-center-item index-footer">
